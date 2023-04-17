@@ -162,3 +162,11 @@ body {
 	padding-top: 3rem;
 	margin: 0 auto;
 }
+
+.center-video {
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
