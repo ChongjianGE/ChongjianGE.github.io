@@ -65,16 +65,17 @@
             <span class="author-block">
                <a href="http://luoping.me/">Ping Luo</a><sup>1</sup>,</span>
             <span class="author-block">
-               <a href="https://dingmyu.github.io/">Mingyu Ding</a><sup>1</sup>,</span>
+               <a href="https://dingmyu.github.io/">Mingyu Ding</a><sup>2,3+</sup>,</span>
             <span class="author-block">
-                <a href="https://varunjampani.github.io/">Varun Jampani</a><sup>3+</sup>,</span>
+                <a href="https://varunjampani.github.io/">Varun Jampani</a><sup>4+</sup>,</span>
             <span class="author-block">
-                <a href="https://zhanwei.site/">Wei Zhan</a><sup>2+</sup>,</span>
+                <a href="https://zhanwei.site/">Wei Zhan</a><sup>2</sup>,</span>
           </div>
 
           <div class="is-size-6 publication-authors">
             <span class="author-block"><sup>1</sup>The University of Hong Kong,</span>
             <span class="author-block"><sup>2</sup>University of California, Berkeley,</span>
+            <span class="author-block"><sup>3</sup>UNC-Chapel Hill,</span> 
             <span class="author-block"><sup>3</sup>Stability AI</span>
           </div>
 
@@ -98,15 +99,15 @@
               </span>
 
               <!-- Code Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://chongjiange.github.io/compgs.html"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code (Coming Soon)</span>
+                  <span>Code</span>
                   </a>
-              </span>
+              </span> -->
 
             </div>
          </div>
@@ -138,7 +139,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Recent breakthroughs in text-guided image generation have significantly advanced the field of 3D generation. While generating a single high-quality 3D object is now feasible, generating multiple objects with reasonable interactions within a 3D space, a.k.a. compositional 3D generation, presents substantial challenges. This paper introduces CompGS, a novel generative framework that employs 3D Gaussian Splatting (GS) for efficient, compositional text-to-3D content generation. To achieve this goal, two core designs are proposed: (1) 3D Gaussians Initialization with 2D compositionality: We transfer the well-established 2D compositionality to initialize the Gaussian parameters on an entity-by-entity basis, ensuring both consistent 3D priors for each entity and reasonable interactions among multiple entities; (2) Dynamic Optimization: We propose a dynamic strategy to optimize 3D Gaussians using Score Distillation Sampling (SDS) loss. CompGS first automatically decomposes 3D Gaussians into distinct entity parts, enabling optimization at both the entity and composition levels. Additionally, CompGS optimizes across objects of varying scales by dynamically adjusting the spatial parameters of each entity, enhancing the generation of fine-grained details, particularly in smaller entities. Qualitative comparisons and quantitative evaluations on T3Bench demonstrate the effectiveness of CompGS in generating compositional 3D objects with superior image quality and semantic alignment over existing methods. CompGS can also be easily extended to controllable 3D editing, facilitating scene generation. We hope CompGS will provide new insights to the compositional 3D generation. Codes will be released to the research community.
+            Recent breakthroughs in text-guided image generation have significantly advanced the field of 3D generation. While generating a single high-quality 3D object is now feasible, generating multiple objects with reasonable interactions within a 3D space, a.k.a. compositional 3D generation, presents substantial challenges. This paper introduces CompGS, a novel generative framework that employs 3D Gaussian Splatting (GS) for efficient, compositional text-to-3D content generation. To achieve this goal, two core designs are proposed: (1) 3D Gaussians Initialization with 2D compositionality: We transfer the well-established 2D compositionality to initialize the Gaussian parameters on an entity-by-entity basis, ensuring both consistent 3D priors for each entity and reasonable interactions among multiple entities; (2) Dynamic Optimization: We propose a dynamic strategy to optimize 3D Gaussians using Score Distillation Sampling (SDS) loss. CompGS first automatically decomposes 3D Gaussians into distinct entity parts, enabling optimization at both the entity and composition levels. Additionally, CompGS optimizes across objects of varying scales by dynamically adjusting the spatial parameters of each entity, enhancing the generation of fine-grained details, particularly in smaller entities. Qualitative comparisons and quantitative evaluations on T3Bench demonstrate the effectiveness of CompGS in generating compositional 3D objects with superior image quality and semantic alignment over existing methods. CompGS can also be easily extended to controllable 3D editing, facilitating scene generation. We hope CompGS will provide new insights to the compositional 3D generation. Codes will be released to the research community upon publication.
           </p>
           <p>
         </div>
