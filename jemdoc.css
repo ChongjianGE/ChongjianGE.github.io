@@ -147,3 +147,12 @@ img:hover {
 ::-webkit-scrollbar-thumb:hover {
   background: #a8a8a8;
 }
+
+/* Profile image hover effect */
+.profile-image {
+    transition: transform 0.2s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.2); /* Scale to 1.1 times the original size */
+}
