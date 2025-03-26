@@ -7,6 +7,7 @@
 <meta name="description" content="Chongjian GE&#39;s home page">
 <meta name="google-site-verification" content="X2QFrl-bPeg9AdlMt4VKT9v6MJUSTCf-SrY3CvKt4Zs" />
 <link rel="stylesheet" href="jemdoc.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <title>Chongjian GE&#39;s Homepage</title>
 
 
@@ -20,24 +21,34 @@ ga('send', 'pageview');
 </script>
 
 
-<table>
+<table class="header-container">
 	<tbody>
 		<tr>
-			<td width="670">
-				<div id="toptitle">
-					<h1>Chongjian GE <font face="Arial"> 葛崇剑 </font></h1></div>
-				<p>
-				<img src="./pic/others/mail.jpg" height="22px">  <a href="mailto:rhettgee1995@gmail.com">rhettgee1995@gmail.com</a><br>
-				<br>
-				<img src="./pic/others/google_scholar_logo.png" height="22px">  <a href="https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AMpAcmR4EkucQUnJIY07lMruJ-qv6OJZVSK2VozPQ8MjlQ2tTZQ6dsgNzMlt-fLofd5wzl9_pdkQ7rBJbv94jg&user=Zusxnl8AAAAJ">Google Sholar</a><br>
-				<br>
-				<img src="./pic/others/github_logo.png" height="22px">  <a href="https://github.com/ChongjianGE">Github</a><br>
-				<br>
-				<img src="./pic/others/location.png" height="22px"> <a href="https://www.google.com/maps/place/San+Jose,+California,+USA" target="_blank">San Jose, California, USA</a><br>
-				</p>
+			<td class="header-info">
+				<div class="name-title">
+					<h1>Chongjian GE <span class="chinese-name">葛崇剑</span></h1>
+				</div>
+				<div class="contact-links">
+					<div class="contact-item">
+						<img src="./pic/others/mail.jpg" alt="Email">
+						<a href="mailto:rhettgee1995@gmail.com">rhettgee1995@gmail.com</a>
+					</div>
+					<div class="contact-item">
+						<img src="./pic/others/google_scholar_logo.png" alt="Google Scholar">
+						<a href="https://scholar.google.com/citations?user=Zusxnl8AAAAJ">Google Scholar</a>
+					</div>
+					<div class="contact-item">
+						<img src="./pic/others/github_logo.png" alt="GitHub">
+						<a href="https://github.com/ChongjianGE">Github</a>
+					</div>
+					<div class="contact-item">
+						<img src="./pic/others/location.png" alt="Location">
+						<a href="https://www.google.com/maps/place/San+Jose,+California,+USA">San Jose, California, USA</a>
+					</div>
+				</div>
 			</td>
-			<td>
-				<img src="./pic/banban.jpg" border="0" width="220" class="profile-image"><br>
+			<td class="profile-photo">
+				<img src="./pic/banban.jpg" alt="Profile Photo" class="profile-image">
 			</td>
 		</tr>
 	</tbody>
@@ -343,39 +354,76 @@ ga('send', 'pageview');
 </table>
 
 
-<h2><font> Honors and Awards </font></h2>
-<ul>
-	<li>CVPR 2023 Outstanding Reviewers, 2023</li>
-	<li>Hong Kong PhD Fellowship Scheme (HKPFS), HKU, 2020-2024</li>
-	<li>YS and Christabel Lung Postgraduate Scholarship, HKU, 2020-2021</li>
-	<li>Rhino-Bird Program, Tencent, 2020-2022</li>
-</ul>
+<h2><font>Honors and Awards</font></h2>
+<div class="awards-container">
+    <div class="award-card">
+        <div class="award-year">2023</div>
+        <div class="award-content">
+            <div class="award-title">CVPR Outstanding Reviewer</div>
+            <div class="award-desc">Recognition for exceptional contribution to peer review process</div>
+        </div>
+    </div>
+    
+    <div class="award-card">
+        <div class="award-year">2020-2024</div>
+        <div class="award-content">
+            <div class="award-title">Hong Kong PhD Fellowship Scheme (HKPFS)</div>
+            <div class="award-desc">Prestigious fellowship awarded by HKU for outstanding PhD candidates</div>
+        </div>
+    </div>
+    
+    <div class="award-card">
+        <div class="award-year">2020-2021</div>
+        <div class="award-content">
+            <div class="award-title">YS and Christabel Lung Postgraduate Scholarship</div>
+            <div class="award-desc">Merit-based scholarship from HKU</div>
+        </div>
+    </div>
+    
+</div>
 
 
 
-<h2><font> Academic Service </font></h2>
-<ul>
-    <li>
-        <b>Conference Review:</b><br>
-        SIGGRAPH<br>
-        IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)<br>
-        IEEE International Conference on Computer Vision (ICCV)<br>
-        European Conference on Computer Vision (ECCV)<br>
-        ACM International Conference on Multimedia (ACMMM)<br>
-        IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)<br>
-        Neural Information Processing Systems (NeurIPS)<br>
-        International Conference on Machine Learning (ICML)<br>
-        International Conference on Learning Representations (ICLR)<br>
-    </li>
-
-    <li>
-        <b>Journal Review:</b><br>
-        IEEE Transactions on Pattern Analysis and Machine Intelligence<br>
-        IEEE Transactions on Intelligent Vehicles<br>
-        IEEE Access<br>
-        IEEE Journal of Biomedical and Health Informatics<br>
-    </li>
-</ul>
+<h2><font>Academic Service</font></h2>
+<div class="service-container">
+    <div class="service-card">
+        <div class="service-header">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>Conference Review</h3>
+        </div>
+        <div class="service-content">
+            <div class="conference-group">
+                <div class="conference-tier">Conferences</div>
+                <div class="conference-list">
+                    <span class="conference-item">CVPR</span>
+                    <span class="conference-item">ICCV</span>
+                    <span class="conference-item">ECCV</span>
+                    <span class="conference-item">NeurIPS</span>
+                    <span class="conference-item">ICML</span>
+                    <span class="conference-item">ICLR</span>
+					<span class="conference-item">SIGGRAPH</span>
+                    <span class="conference-item">ACMMM</span>
+                    <span class="conference-item">WACV</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="service-card">
+        <div class="service-header">
+            <i class="fas fa-book-open"></i>
+            <h3>Journal Review</h3>
+        </div>
+        <div class="service-content">
+            <div class="journal-list">
+                <div class="journal-item">IEEE TPAMI</div>
+                <div class="journal-item">IEEE TIV</div>
+                <div class="journal-item">IEEE Access</div>
+                <div class="journal-item">IEEE JBHI</div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
