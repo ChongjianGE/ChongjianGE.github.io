@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="oft Neighbors are Positive Supporters in Contrastive Visual Representation Learning.">
+  <meta name="keywords" content="SSL">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Soft Neighbors are Positive Supporters in Contrastive Visual Representation Learning</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="../static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="../static/css/index.css">
+  <link rel="icon" href="../static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="../static/js/fontawesome.all.min.js"></script>
+  <script src="../static/js/bulma-carousel.min.js"></script>
+  <script src="../static/js/bulma-slider.min.js"></script>
+  <script src="../static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Soft Neighbors are Positive Supporters in Contrastive Visual Representation Learning</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+               <p>Chongjian GE,</p></span>
+            <span class="author-block">
+               <p>Jiangliu Wang,</p></span>
+            <span class="author-block">
+               <p>Zhan Tong,</p></span>
+            <span class="author-block">
+               <p>Shoufa Chen,</p></span>
+            <span class="author-block">
+               <p>Yibing Song,</p></span>
+            <span class="author-block">
+               <p>Ping Luo,</p></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="../static/images/teaser_video.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        We leverage the soft neighbors to sufficiently explore the correlation information among samples in cotrastive learning.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!--##################################   Abstract   ##################################-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Contrastive learning methods train visual encoders by comparing views (e.g., often created via a group of data augmentations on the same instance) from one instance to others.
+            Typically, the views created from one instance are set as positive, while views from other instances are negative.
+            This binary instance discrimination is studied extensively to improve feature representations in self-supervised learning.
+          </p>
+          <p>
+            In this paper, we rethink the instance discrimination framework and find the binary instance labeling insufficient to measure correlations between different samples.
+            For an intuitive example, given a random image instance, there may exist other images in a mini-batch whose content meanings are the same (i.e., belonging to the same category) or partially related (i.e., belonging to a similar category).
+            How to treat the images that correlate similarly to the current image instance leaves an unexplored problem.
+            We thus propose to support the current image by exploring other correlated instances (i.e., soft neighbors).
+          </p>
+          <p>
+            We first carefully cultivate a candidate neighbor set, which will be further utilized to explore the highly-correlated instances.
+            A cross-attention module is then introduced to predict the correlation score (denoted as positiveness) of other correlated instances with respect to the current one.
+            The positiveness score quantitatively measures the positive support from each correlated instance, and is encoded into the objective for pretext training.
+            To this end, our proposed method benefits in discriminating uncorrelated instances while absorbing correlated instances for SSL.
+            We evaluate our soft neighbor contrastive learning method (SNCLR) on standard visual recognition benchmarks, including image classification, object detection, and instance segmentation.
+            The state-of-the-art recognition performance shows that SNCLR is effective in improving feature representations from both ViT and CNN encoders.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+
+  </div>
+</section>
+
+
+<!--
+
+</body>
+</html>
