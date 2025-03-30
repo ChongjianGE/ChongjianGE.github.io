@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="MetaBEV">
+  <meta name="keywords" content="SSL">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CompGS: Unleashing 2D Compositionality for Compositional Text-to-3D via Dynamically Optimizing 3D Gaussians</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="../static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="../static/css/index.css">
+  <link rel="icon" href="../static/compgs_images/compgs_logo.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="../static/js/fontawesome.all.min.js"></script>
+  <script src="../static/js/bulma-carousel.min.js"></script>
+  <script src="../static/js/bulma-slider.min.js"></script>
+  <script src="../static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">CompGS: Unleashing 2D Compositionality for Compositional Text-to-3D via Dynamically Optimizing 3D Gaussians</h1>
+          <div class="is-size-6 publication-authors">
+            <span class="author-block">
+               <a href="https://chongjiange.github.io/">Chongjian Ge</a><sup>1,2*</sup>,</span>
+            <span class="author-block">
+               <a href="https://www.chenfengx.com/">Chenfeng Xu,</a><sup>2</sup>,</span>
+            <span class="author-block">
+               <a href="https://jiyuanfeng.github.io/">Yuanfeng Ji</a><sup>1</sup>,</span>
+            <span class="author-block">
+               <a href="https://pholypeng.github.io/">Chensheng Peng</a><sup>2</sup>,</span>
+            <span class="author-block">
+               <a href="https://msc.berkeley.edu/people/tomizuka.html">Masayoshi Tomizuka</a><sup>2</sup>,</span>
+            <span class="author-block">
+               <a href="http://luoping.me/">Ping Luo</a><sup>1</sup>,</span>
+            <span class="author-block">
+               <a href="https://dingmyu.github.io/">Mingyu Ding</a><sup>2,3+</sup>,</span>
+            <span class="author-block">
+                <a href="https://varunjampani.github.io/">Varun Jampani</a><sup>4+</sup>,</span>
+            <span class="author-block">
+                <a href="https://zhanwei.site/">Wei Zhan</a><sup>2</sup>,</span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>1</sup>The University of Hong Kong,</span>
+            <span class="author-block"><sup>2</sup>University of California, Berkeley,</span>
+            <span class="author-block"><sup>3</sup>UNC-Chapel Hill,</span> 
+            <span class="author-block"><sup>3</sup>Stability AI</span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block">(<sup>*</sup> Work done during visiting in UC Berkeley, <sup>+</sup>Shared corresponding authors)</span>
+          </div>
+
+        </div>
+      </div>
+       <div class="column has-text-centered">
+            <div class="publication-links">
+
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2410.20723"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+              <!-- Code Link. -->
+              <!-- <span class="link-block">
+                <a href="https://chongjiange.github.io/compgs.html"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span> -->
+
+            </div>
+         </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="../static/compgs_images/teaser.png" class="interpolation-image"
+         alt="Interpolate start reference image." />
+      <h2 class="subtitle has-text-centered">
+        Illustration of compositional 3D Generation and CompGS. CompGS achieves compositional text-to-3D by transferring 2D compositionality to initialize 3D Gaussians.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<!--##################################   Abstract   ##################################-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent breakthroughs in text-guided image generation have significantly advanced the field of 3D generation. While generating a single high-quality 3D object is now feasible, generating multiple objects with reasonable interactions within a 3D space, a.k.a. compositional 3D generation, presents substantial challenges. This paper introduces CompGS, a novel generative framework that employs 3D Gaussian Splatting (GS) for efficient, compositional text-to-3D content generation. To achieve this goal, two core designs are proposed: (1) 3D Gaussians Initialization with 2D compositionality: We transfer the well-established 2D compositionality to initialize the Gaussian parameters on an entity-by-entity basis, ensuring both consistent 3D priors for each entity and reasonable interactions among multiple entities; (2) Dynamic Optimization: We propose a dynamic strategy to optimize 3D Gaussians using Score Distillation Sampling (SDS) loss. CompGS first automatically decomposes 3D Gaussians into distinct entity parts, enabling optimization at both the entity and composition levels. Additionally, CompGS optimizes across objects of varying scales by dynamically adjusting the spatial parameters of each entity, enhancing the generation of fine-grained details, particularly in smaller entities. Qualitative comparisons and quantitative evaluations on T3Bench demonstrate the effectiveness of CompGS in generating compositional 3D objects with superior image quality and semantic alignment over existing methods. CompGS can also be easily extended to controllable 3D editing, facilitating scene generation. We hope CompGS will provide new insights to the compositional 3D generation. Codes will be released to the research community upon publication.
+          </p>
+          <p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-widescreen">
+    <div class="rows">
+      <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+        </div>
+        </br>
+        <img src="../static/compgs_images/pipeline.png" class="interpolation-image"
+         alt="Interpolate start reference image." />
+        </br>
+        </br>
+        <div class="content has-text-justified">
+          <p>
+            <b>Figure 1. Overall pipeline of CompGS.</b> Given a compositional prompt V, we first use an LLM to decompose it into entity-level prompts v_l, guiding the segmentation of each entity from the compositional image generated by T2I models. The segmented images initialize entity-level 3D Gaussians via image-to-3D models. CompGS employs a dynamic optimization strategy, alternating between composition-level optimization of θ and entity-level optimization of θ_l. For entity-level optimization, COMPGS dynamically maintains volume consistency to refine the details of each objects, particularly the small one.
+          </p>
+        </div>
+      </div>
+
+      
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-widescreen">
+    <div class="rows">
+      <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Qualitative Comparisons on Multiple-objects Generation</h2>
+        <div class="content has-text-justified">
+
+        </div>
+        </br>
+        <img src="../static/compgs_images/tmp_comparisons_2.png" class="interpolation-image"
+         alt="Interpolate start reference image." />
+        </br>
+        </br>
+        <div class="content has-text-justified">
+          <p>
+            <b>Figure 2. Qualitative comparisons between CompGS and other text-to-3D models on T3Bench (multiple objects track).</b> Compared to others, CompGS is better at generating highly-composed, high-quality 3D contents that strictly align with the given texts.
+          </p>
+        </div>
+      </div>
+
+      
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-widescreen">
+    <div class="rows">
+      <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Qualitative Comparisons on Single-object Generation</h2>
+        <div class="content has-text-justified">
+
+        </div>
+        </br>
+        <img src="../static/compgs_images/tmp_comparisons_3.png" class="interpolation-image"
+         alt="Interpolate start reference image." />
+        </br>
+        </br>
+        <div class="content has-text-justified">
+          <p>
+            <b>Figure 2. Qualitative comparisons between CompGS and other text-to-3D models on T3Bench (single objects track).</b> Compared to others, CompGS is better at generating highly-composed, high-quality 3D contents that strictly align with the given texts.
+          </p>
+        </div>
+      </div>
+
+      
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-widescreen">
+    <div class="rows">
+      <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Quantitative Comparisons with Baselines on T3Bench </h2>
+        <div class="content has-text-justified">
+
+        </div>
+        </br>
+        <img src="../static/compgs_images/tmp_comparisons_4.png" class="interpolation-image"
+         alt="Interpolate start reference image." />
+        </br>
+        </br>
+        <div class="content has-text-justified">
+          <p>
+            <b>Table 4: Quantitative comparisons with baselines on T3Bench (all tracks).</b> CompGS is compared with feed-forward models, optimization-based models, and models specifically designed for compositional generation.
+          </p>
+        </div>
+      </div>
+
+      
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-widescreen">
+    <div class="rows">
+      <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Quantitative Comparisons with Baselines on T3Bench </h2>
+        <div class="content has-text-justified">
+
+        </div>
+        </br>
+        <img src="../static/compgs_images/3d_editing.png" class="interpolation-image"
+         alt="Interpolate start reference image." />
+        </br>
+        </br>
+        <div class="content has-text-justified">
+          <p>
+            CompGS provides a user-friendly way to progressively edit on 3D scenes for compositional generation.
+          </p>
+        </div>
+      </div>
+
+      
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <h3 class="title">Acknowledgements</h3>
+          <p>
+            The website template was borrowed from <a href="https://nerfies.github.io/">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<!--
+
+</body>
+</html>
