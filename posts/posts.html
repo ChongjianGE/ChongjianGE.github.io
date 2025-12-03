@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlaceHolder | Chongjian GE</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Patrick+Hand+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- Inherit core styles from homepage --- */
+        :root {
+            --bg-paper: #fdfbf7;
+            --card-bg: #ffffff;
+            --ink-primary: #2b2b2b;
+            --ink-secondary: #555555;
+            --pencil-gray: #888888;
+            --shadow-sketch: 4px 4px 0px #444444;
+            --border-width: 2px;
+            --radius-sketch: 2px 8px 3px 5px;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            background-color: var(--bg-paper);
+            color: var(--ink-primary);
+            line-height: 1.8; /* Slightly larger line height for reading */
+            margin: 0;
+            padding: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
+        }
+
+        .container {
+            max-width: 1100px; /* Narrower width for better reading experience */
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* --- Top Navigation --- */
+        .post-nav {
+            margin-bottom: 40px;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--ink-primary);
+            font-family: 'Patrick Hand SC', cursive;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-bottom: 2px dashed var(--pencil-gray);
+            transition: all 0.2s;
+        }
+
+        .back-btn i { margin-right: 8px; }
+        
+        .back-btn:hover {
+            border-bottom-style: solid;
+            transform: translateX(-5px); /* Move left animation */
+        }
+
+        /* --- Article Card Container --- */
+        .post-card {
+            background: var(--card-bg);
+            border: var(--border-width) solid var(--ink-primary);
+            border-radius: var(--radius-sketch);
+            box-shadow: var(--shadow-sketch);
+            padding: 60px; /* Spacious padding */
+            position: relative;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+        }
+
+        /* --- Article Header --- */
+        .post-header {
+            margin-bottom: 40px;
+            text-align: center;
+            border-bottom: 3px double var(--pencil-gray); /* Double line separator */
+            padding-bottom: 30px;
+        }
+
+        .post-title {
+            font-family: 'Patrick Hand SC', cursive;
+            font-size: 2.8rem;
+            margin: 0 0 15px 0;
+            line-height: 1.1;
+        }
+
+        .post-meta {
+            font-family: 'Patrick Hand SC', cursive;
+            color: var(--ink-secondary);
+            font-size: 1.1rem;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* --- Article Content Typography --- */
+        .post-content {
+            font-size: 1.15rem;
+            color: #333;
+        }
+
+        .post-content h2 {
+            font-family: 'Patrick Hand SC', cursive;
+            font-size: 1.8rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            /* SVG underline for headings */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='10' viewBox='0 0 200 10' preserveAspectRatio='none'%3E%3Cpath d='M0,5 Q80,10 200,3' stroke='%23444' stroke-width='3' fill='none' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            background-size: 100% 10px;
+            padding-bottom: 10px;
+        }
+
+        .post-content p {
+            margin-bottom: 1.5em;
+            text-align: justify;
+        }
+
+        .post-content img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid var(--ink-primary);
+            border-radius: 4px;
+            margin: 20px 0;
+            box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+        }
+
+        .post-content blockquote {
+            border-left: 4px solid var(--ink-primary);
+            margin: 20px 0;
+            padding-left: 20px;
+            font-style: italic;
+            color: var(--ink-secondary);
+            background: rgba(0,0,0,0.03);
+            padding: 15px 20px;
+            border-radius: 0 10px 10px 0;
+        }
+
+        /* --- Footer --- */
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--ink-secondary);
+            font-family: 'Patrick Hand SC', cursive;
+            font-size: 1rem;
+            opacity: 0.7;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .post-card { padding: 30px 20px; }
+            .post-title { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <nav class="post-nav">
+        <a href="../index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to Homepage
+        </a>
+    </nav>
+
+
+
+    <footer class="footer">
+        © Chongjian GE | Written with ✏️ in 2025
+    </footer>
+
+</div>
+
+<script>
+    document.addEventListener('mousemove', function(e) {
+        if (Math.random() > 0.6) return; // Reduce dust particles for easier reading
+        const dot = document.createElement('div');
+        dot.style.position = 'fixed';
+        dot.style.background = '#333';
+        dot.style.borderRadius = '50%';
+        dot.style.pointerEvents = 'none';
+        dot.style.zIndex = '9999';
+        dot.style.opacity = '0.6';
+        const size = Math.random() * 3 + 1;
+        dot.style.width = size + 'px';
+        dot.style.height = size + 'px';
+        dot.style.left = e.clientX + 'px';
+        dot.style.top = e.clientY + 'px';
+        dot.style.animation = 'dustFade 0.8s forwards';
+        document.body.appendChild(dot);
+        setTimeout(() => dot.remove(), 800);
+    });
+    
+    // Inject animation CSS
+    const style = document.createElement('style');
+    style.innerHTML = `@keyframes dustFade { to { opacity: 0; transform: scale(0.2) translateY(10px); } }`;
+    document.head.appendChild(style);
+</script>
+
+</body>
+</html>

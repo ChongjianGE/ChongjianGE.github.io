@@ -1,463 +1,943 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-<link rel="shortcut icon" href="./pic/others/banban_icon.png">
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="keywords" content="Chongjian GE, CS, HKU, The University of Hong Kong">
-<meta name="description" content="Chongjian GE&#39;s home page">
-<meta name="google-site-verification" content="X2QFrl-bPeg9AdlMt4VKT9v6MJUSTCf-SrY3CvKt4Zs" />
-<link rel="stylesheet" href="jemdoc.css" type="text/css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<title>Chongjian GE&#39;s Homepage</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chongjian GE's Homepage - Research Scientist at Adobe Research">
+    <title>Chongjian GE | Homepage</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Patrick+Hand+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <style>
+        :root {
+            --bg-paper: #fdfbf7;
+            --card-bg: #ffffff;
+            --ink-primary: #2b2b2b;
+            --ink-secondary: #555555;
+            --pencil-gray: #888888;
+            --shadow-sketch: 4px 4px 0px #444444;
+            --border-width: 2px;
+            --radius-sketch: 2px 8px 3px 5px;
+        }
 
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-159069803-1', 'auto');
-ga('send', 'pageview');
-</script>
+        body {
+            font-family: 'Lora', serif;
+            background-color: var(--bg-paper);
+            color: var(--ink-primary);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
+        }
 
+        .container {
+            max-width: 1100px; 
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
 
-<table class="header-container">
-	<tbody>
-		<tr>
-			<td class="header-info">
-				<div class="name-title">
-					<h1>Chongjian GE <span class="chinese-name">葛崇剑</span></h1>
-				</div>
-				<div class="contact-links">
-					<div class="contact-item">
-						<img src="./pic/others/mail.jpg" alt="Email">
-						<a href="mailto:rhettgee1995@gmail.com">rhettgee1995@gmail.com</a>
-					</div>
-					<div class="contact-item">
-						<img src="./pic/others/google_scholar_logo.png" alt="Google Scholar">
-						<a href="https://scholar.google.com/citations?user=Zusxnl8AAAAJ">Google Scholar</a>
-					</div>
-					<div class="contact-item">
-						<img src="./pic/others/github_logo.png" alt="GitHub">
-						<a href="https://github.com/ChongjianGE">Github</a>
-					</div>
-					<div class="contact-item">
-						<img src="./pic/others/location.png" alt="Location">
-						<a href="https://www.google.com/maps/place/San+Jose,+California,+USA">San Jose, California, USA</a>
-					</div>
-				</div>
-			</td>
-			<td class="profile-photo">
-				<div class="profile-image-container">
-					<img src="./pic/banban.jpg" alt="Profile Photo" class="profile-image primary-image">
-					<img src="./pic/banban_all.png" alt="Profile Photo" class="profile-image secondary-image">
-				</div>
-			</td>
-		</tr>
-	</tbody>
-</table>
+        a {
+            text-decoration: none;
+            color: var(--ink-primary);
+            font-weight: 600;
+            position: relative;
+            transition: color 0.2s ease;
+        }
 
+        /* Card Styles */
+        .sketch-card {
+            background: var(--card-bg);
+            border: var(--border-width) solid var(--ink-primary);
+            border-radius: var(--radius-sketch);
+            box-shadow: var(--shadow-sketch);
+            padding: 32px;
+            margin-bottom: 32px;
+            transition: transform 0.2s;
+            position: relative;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+        }
 
-<h2>Biography </h2>
-<p>
-	I am a Research Scientist at <a href=https://research.adobe.com/>Adobe Research</a>, working on visual generation models. In 2024, I got my Ph.D. degree from the CS Department, the University of Hong Kong,
-	under the supervision of <a href=http://luoping.me/>Prof. Ping Luo</a>. 
-	I was also a visiting student at UC Berkeley, working with <a href=https://me.berkeley.edu/people/masayoshi-tomizuka/>Prof. Masayoshi Tomizuka</a>. We are actively hiring self-motivated interns. 
-	<br>Please feel free to reach me if you are interested in interns at Adobe Research or collaborating with me.
-</p>
+        .sketch-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px var(--ink-primary);
+        }
 
+        /* Typography */
+        h1, h2, h3 {
+            font-family: 'Patrick Hand SC', cursive;
+            color: var(--ink-primary);
+            letter-spacing: 0.5px;
+        }
 
-<h2>News</h2>
-<div style="height: 150px; overflow: auto; font-size: small;">
-<ul>
-	<li>
-		[02/2025] Two papers was accepted by CVPR <span style="color:red; white-space: nowrap;"> (One Highlight)</span>.
-	</li>
-	<li>
-		[01/2024] Three papers was accepted by ICLR <span style="color:red; white-space: nowrap;">(One Spotlight)</span>.
-	</li>
-	<li>
-		[12/2023] One paper was accepted by AAAI.
-	</li>
-	<li>
-		[07/2023] One paper was accepted by ICCV.
-	</li>
-	<li>
-		[02/2023] One paper was accepted by TIP.
-	</li>
-	<li>
-		[01/2023] One paper was accepted by ICLR 2023.
-	</li>
-	<li>
-		[09/2022] One paper was accepted by NeurIPS 2022 Track Datasets and Benchmarks.
-	</li>
-	<li>
-		[09/2022] One paper was accepted by NeurIPS 2022 <span style="color:red; white-space: nowrap;">(Oral)</span>.
-	</li>
-	<li>
-		[01/2022] Two papers were accepted by ICLR 2022 <span style="color:red; white-space: nowrap;">(One Oral paper, and one Spotlight paper)</span>.
-	</li>
-	<li>
-		[10/2021] One paper was accepted by NeurIPS 2021.
-	</li>
-	<li>
-		[07/2021] One paper was accepted by ICCV 2021.
-	</li>
-	<li>
-		[03/2021] Two papers were accepted by CVPR 2021.
-	</li>
-</ul>
-</div>
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            text-align: left;
+        }
 
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+            padding-bottom: 8px;
+            border-bottom: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='10' viewBox='0 0 200 10' preserveAspectRatio='none'%3E%3Cpath d='M0,5 Q80,10 200,3' stroke='%23444' stroke-width='3' fill='none' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            background-size: 100% 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        h2 i {
+            margin-right: 16px;
+            font-size: 1.6rem;
+            transform: rotate(-5deg);
+            filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.2));
+        }
 
+        /* Profile Section */
+        .profile-section {
+            display: flex;
+            gap: 50px;
+            align-items: flex-start;
+        }
 
-<h2> Publications</h2>
-<span style="color:red; white-space: nowrap; font-size: small;"><b>(* indicates equal contribution, + indicates corresponding author)</b></span>
-<table id="tbPublications" width="100%">
-	<tbody>
-	<tr>
-		<td><center><img width="250" src="./pic/2025/awm.png"></center></td>
-		<td>
-			<font size="2">Advantage Weighted Matching: Aligning RL with Pretraining in Diffusion Models,
-			<br>
-			<i>Shuchen Xue, <b>Chongjian Ge+</b>, Shilong Zhang, Yichen Li, Zhi-Ming Ma</i>
-			<!-- <br>In Submission, 2025		 -->
-			<br>
-			[<a href='https://arxiv.org/abs/2509.25050'><b>paper</b></a>|<a href='https://github.com/scxue/advantage_weighted_matching'><b>github</b></a>]
-		</td>
-	</tr>
+        .profile-photo-wrapper {
+            flex-shrink: 0;
+            width: 180px;
+            height: 180px;
+            position: relative;
+            border: 3px solid var(--ink-primary);
+            border-radius: var(--radius-sketch);
+            box-shadow: var(--shadow-sketch);
+            overflow: hidden;
+            background: white;
+            /* Avatar moved down as requested */
+            margin-top: 35px; 
+        }
 
-	<tr>
-		<td><center><img width="250" src="./pic/2025/pixflow.png"></center></td>
-		<td>
-			<font size="2">PixelFlow: Pixel-Space Generative Models with Flow
-			<br>
-			<i>Shoufa Chen, <b>Chongjian Ge</b>, Shilong Zhang, Peize Sun, Ping Luo</i>
-			<!-- <br>In Submission, 2025		 -->
-			<br>
-			[<a href='https://arxiv.org/pdf/2504.07963?'><b>paper</b></a>|<a href='https://github.com/ShoufaChen/PixelFlow'><b>github</b></a>]
-		</td>
-	</tr>
+        .tape-effect::before {
+            content: "";
+            position: absolute;
+            top: -15px; left: 50%;
+            transform: translateX(-50%) rotate(-2deg);
+            width: 100px; height: 30px;
+            background-color: rgba(255, 255, 255, 0.6);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            border-left: 2px dashed rgba(0,0,0,0.1);
+            border-right: 2px dashed rgba(0,0,0,0.1);
+            z-index: 10;
+            backdrop-filter: blur(1px);
+        }
 
-	<tr>
-		<td><center><video width="250" autoplay loop muted><source src="./pic/2025/goku.mp4" type="video/mp4"></video></center></td>
-		<td>
-			<font size="2"><b>Goku:</b> Flow Based Video Generative Foundation Models,
-			<br>
-			<i>Shoufa Chen*, <b>Chongjian Ge*</b>, Yuqi Zhang, Yida Zhang, Fengda Zhu, Hao Yang, Hongxiang Hao, Hui Wu, Zhichao Lai, Yifei Hu, Ting-Che Lin, Shilong Zhang, Fu Li, Chuan Li, Xing Wang, Yanghua Peng, Peize Sun, Ping Luo, Yi Jiang, Zehuan Yuan, Bingyue Peng, Xiaobing Liu</i>
-			<br>IEEE/CVF Conference on Computer Vision and Pattern Recognition <b>(CVPR Highlight)</b> 2025		
-			<br>
-			[<a href='https://arxiv.org/abs/2502.04896'><b>paper</b></a>|<a href='https://saiyan-world.github.io/goku/'><b>project page</b></a>|<a href='https://github.com/Saiyan-World/goku'><b>github</b></a>]
-		</td>
-	</tr>
+        .sketch-img {
+            width: 100%; height: 100%; object-fit: cover;
+            filter: grayscale(100%) contrast(120%) brightness(110%);
+            transition: opacity 0.3s ease;
+        }
+        .profile-photo-wrapper:hover .secondary-img { opacity: 1; }
+        .profile-photo-wrapper .secondary-img { position: absolute; top: 0; left: 0; opacity: 0; }
+        
+        .profile-info { flex-grow: 1; display: flex; flex-direction: column; }
+        .chinese-name { font-family: 'Lora', serif; color: var(--ink-secondary); margin-left: 10px; font-size: 1.4rem; }
+        .bio-text { color: var(--ink-secondary); margin-bottom: 24px; font-size: 1.1rem; }
+        .bio-text b { color: var(--ink-primary); border-bottom: 1px solid var(--pencil-gray); }
 
-	<tr>
-		<td><center><img width="250" src="./pic/2024/compGS_arxiv.png"></center></td>
-		<td>
-			<font size="2">CompGS: Unleashing 2D Compositionality for Compositional Text-to-3D via Dynamically Optimizing 3D Gaussians,
-			<br>
-			<i><b>Chongjian Ge</b>, Chenfeng Xu, Yuanfeng Ji, Chensheng Peng, Masayoshi Tomizuka, Ping Luo, Mingyu Ding<span style="color:red; white-space: nowrap;">+</span>, Varun Jampani<span style="color:red; white-space: nowrap;">+</span>, Wei Zhan</i>
-			<br>IEEE/CVF Conference on Computer Vision and Pattern Recognition <b>(CVPR)</b> 2025	
-			<br>
-			[<a href='https://chongjiange.github.io/subpages/compgs.html'><b>project page</b></a>]
-	</td>
-	</tr>
+        .contact-pills { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 30px; }
+        .pill {
+            display: inline-flex; align-items: center; padding: 8px 16px;
+            background: var(--card-bg); color: var(--ink-primary);
+            border: 2px solid var(--ink-primary); border-radius: 20px 25px 22px 18px;
+            font-family: 'Patrick Hand SC', cursive; font-size: 1.1rem; font-weight: bold;
+            transition: all 0.2s; box-shadow: 2px 2px 0px var(--pencil-gray);
+        }
+        .pill:hover {
+            background: var(--ink-primary); color: var(--card-bg);
+            box-shadow: 1px 1px 0px var(--ink-primary); transform: translate(1px, 1px);
+        }
 
-	<tr>
-		<td><center><img width="250" src="./pic/2024/pixart_sigma.png"></center></td>
-		<td>
-			<font size="2">PixArt-Σ: Weak-to-Strong Training of Diffusion Transformer for 4K Text-to-Image Generation,
-			<br>
-			<i>Junsong Chen<span style="color:red; white-space: nowrap;">*</span>, <b>Chongjian Ge</b><span style="color:red; white-space: nowrap;">*</span>, Enze Xie<span style="color:red; white-space: nowrap;">*</span>, Yue Wu<span style="color:red; white-space: nowrap;">*</span>, Lewei Yao, Xiaozhe Ren, Zhongdao Wang, Ping Luo, Huchuan Lu, Zhenguo Li</i>
-			<br>European Conference on Computer Vision (<b>ECCV</b>) 2024
-			<br>
-			[<a href='https://arxiv.org/abs/2403.04692'><b>paper</b></a>|<a href='https://github.com/PixArt-alpha/PixArt-sigma'><b>code</b></a>|<a href='https://pixart-alpha.github.io/PixArt-sigma-project/'><b>project page</b></a>|<a href='https://mp.weixin.qq.com/s/JcfVi0P4Db37McsfE6eXdg'><b>media report</b></a>]
-		</td>
-	</tr>
+        /* Tabs integrated in Profile */
+        .nav-tabs {
+            display: flex; gap: 15px;
+            border-top: 2px dashed var(--pencil-gray);
+            padding-top: 25px; margin-top: auto;
+        }
+        .nav-tab-btn {
+            font-family: 'Patrick Hand SC', cursive; font-size: 1.3rem;
+            padding: 6px 20px; background: transparent;
+            border: 2px solid var(--ink-secondary); color: var(--ink-secondary);
+            border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+            cursor: pointer; transition: all 0.3s ease;
+        }
+        .nav-tab-btn.active {
+            border-color: var(--ink-primary); color: var(--card-bg);
+            background: var(--ink-primary); box-shadow: 3px 3px 0px var(--pencil-gray);
+            transform: scale(1.05) rotate(-1deg);
+        }
 
-	<tr>
-		<td><center><img width="250" src="./pic/2023/arxiv_pixart.png"></center></td>
-		<td>
-			<font size="2">PIXART-α: Fast Training of Diffusion Transformer for Photorealistic Text-to-Image Synthesis,
-			<br>
-			<i>Junsong Chen<span style="color:red; white-space: nowrap;">*</span>, Jincheng Yu<span style="color:red; white-space: nowrap;">*</span>, <b>Chongjian Ge<span style="color:red; white-space: nowrap;">*</span></b>, Lewei Yao<span style="color:red; white-space: nowrap;">*</span>, Enze Xie, Yue Wu, Zhongdao Wang, James Kwok, Ping Luo, Huchuan Lu, Zhenguo Li</i>
-			<br>International Conference on Learning Representations (<b>ICLR</b>) 2024 (<b>Spotlight</b>)
-			<br>
-			[<a href='https://arxiv.org/abs/2310.00426'><b>paper</b></a>|<a href='https://github.com/PixArt-alpha/PixArt-alpha'><b>code</b></a>|<a href='http://pixart-alpha.github.io/'><b>project page</b></a>|<a href='https://www.jiqizhixin.com/articles/2023-10-18'><b>media report</b></a>]
-		</td>
-	</tr>
+        /* Publications */
+        .pub-item { display: grid; grid-template-columns: 220px 1fr; gap: 32px; margin-bottom: 40px; padding-bottom: 32px; border-bottom: 2px dashed var(--pencil-gray); }
+        .pub-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
 
-	<tr>
-		<td><center><img width="250" src="./pic/2023/iccv_metabev.png"></center></td>
-		<td>
-			<font size="2">MetaBEV: Solving Sensor Failures for BEV Detection and Map Segmentation,
-			<br>
-			<i><b>Chongjian Ge<span style="color:red; white-space: nowrap;">*</span></b>, Junsong Chen<span style="color:red; white-space: nowrap;">*</span>, Enze Xie, Zhongdao Wang, Lanqing Hong, Huchuan Lu, Zhenguo Li, Ping Luo</i>
-			<br>IEEE/CVF International Conference on Computer Vision (<b>ICCV</b>) 2023
-			<br>
-			[<a href='https://arxiv.org/abs/2304.09801'><b>paper</b></a>|<a href='https://chongjiange.github.io/subpages/metabev.html'><b>project page</b></a>|<a href='https://github.com/ChongjianGE/MetaBEV'><b>code</b></a>|<a href='https://www.youtube.com/watch?v=TiEQpYq77Xo'><b>demo</b></a>|<a href='https://mp.weixin.qq.com/s/yLdkwhRz1lk9ySAHh3HWew'><b>chinese media report</b></a>]
-		</td>
-	</tr>
+        .pub-img-wrapper {
+            border: 3px solid var(--ink-primary); border-radius: var(--radius-sketch);
+            box-shadow: var(--shadow-sketch); overflow: hidden; background: white;
+            height: fit-content; cursor: pointer; position: relative;
+            transition: transform 0.2s;
+        }
+        .pub-img-wrapper:hover { transform: scale(1.02); }
+        
+        /* Zoom Icon Hint */
+        .pub-img-wrapper::after {
+            content: '\f00e'; /* fa-search-plus */
+            font-family: "Font Awesome 6 Free"; font-weight: 900;
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            color: white; background: rgba(0,0,0,0.6);
+            padding: 15px; border-radius: 50%; font-size: 1.5rem;
+            transition: transform 0.2s; pointer-events: none; z-index: 5;
+        }
+        .pub-img-wrapper:hover::after { transform: translate(-50%, -50%) scale(1); }
 
-	<tr>
-		<td><center><img width="250" src="./pic/2023/iccv_groupmixformer.png"></center></td>
-		<td>
-			<font size="2">Advancing Vision Transformers with Group-Mix Attention,
-			<br>
-			<i><b>Chongjian Ge</b>, Xiaohan Ding, Zhan Tong, Li Yuan, Jiangliu Wang, Yibing Song, Ping Luo</i>
-			<br>
-			[<a href='https://arxiv.org/abs/2311.15157'><b>paper</b></a>|<a href='https://github.com/AILab-CVC/GroupMixFormer'><b>code</b></a>|<a href='https://chongjiange.github.io/subpages/gma'><b>project page</b></a>]
-		</td>
-	</tr>
+        .pub-img-wrapper img, .pub-img-wrapper video {
+            width: 100%; height: auto; display: block; transition: filter 0.3s;
+        }
+        .pub-img-wrapper:hover img, .pub-img-wrapper:hover video { filter: grayscale(100%) contrast(140%); }
+        .keep-color { filter: none !important; }
+        .pub-img-wrapper:hover .keep-color { filter: none !important; }
 
-	<tr>
-		<td><center><img width="250" src="./pic/2023/auto_bench.png"></center></td>
-		<td>
-			<font size="2">Large Language Models as Automated Aligners for benchmarking Vision-Language Models,
-			<br>
-			<i>Yuanfeng Ji<span style="color:red; white-space: nowrap;">*</span>, <b>Chongjian Ge<span style="color:red; white-space: nowrap;">*</span></b>, Weikai Kong, Enze Xie, Zhengying Liu, Zhengguo Li, Ping Luo</i>
-			<br>International Conference on Learning Representations (<b>ICLR</b>) 2024 
-			<br>
-			[<a href='https://arxiv.org/abs/2311.14580'><b>paper</b></a>|<a href='xx'><b>code (coming soom)</b></a>|<a href='xx'><b>project page (coming soom)</b></a>]
-		</td>
-	</tr>
+        .pub-title { font-size: 1.3rem; font-weight: 700; color: var(--ink-primary); margin-bottom: 10px; line-height: 1.3; }
+        .pub-authors { color: var(--ink-secondary); font-size: 1rem; margin-bottom: 12px; font-style: italic; }
+        .me { font-weight: 700; color: var(--ink-primary); text-decoration: underline; text-decoration-style: wavy; }
+        .pub-venue { font-family: 'Patrick Hand SC', cursive; font-size: 1.1rem; color: var(--ink-primary); margin-bottom: 16px; }
+        .venue-highlight { font-weight: bold; border: 2px solid var(--ink-primary); padding: 2px 6px; border-radius: 10% 30% 10% 20%; margin-left: 8px; font-size: 0.9em; }
+        
+        .pub-links { display: flex; gap: 12px; margin-top: auto; }
+        .pub-link-btn {
+            display: inline-block; padding: 6px 14px;
+            border: 2px solid var(--ink-primary); border-radius: 4px 8px 5px 7px;
+            font-family: 'Patrick Hand SC', cursive; font-size: 1rem; font-weight: bold;
+            color: var(--ink-primary); box-shadow: 2px 2px 0px var(--pencil-gray);
+            transition: all 0.2s; background: white;
+        }
+        .pub-link-btn:hover { background: var(--ink-primary); color: white; transform: translate(1px, 1px); }
+        .pub-link-btn.project { background: var(--ink-primary); color: white; }
+        .pub-link-btn.project:hover { background: white; color: var(--ink-primary); }
 
-	<tr>
-		<td><center><img width="250" src="./pic/2023/iclr23_snclr.png"></center></td>
-		<td>
-			<font size="2">Soft Neighbors Are Positive Supporters in Contrastive Visual Representation Learning,
-			<br>
-			<i><b>Chongjian Ge</b>, Jiangliu Wang, Zhan Tong, Shoufa Chen, Yibing Song, and Ping Luo</i>
-			<br>International Conference on Learning Representations (<b>ICLR</b>) 2023
-			<br>
-			[<a href='https://arxiv.org/abs/2303.17142'><b>paper</b></a>|<a href='https://github.com/ChongjianGE/SNCLR'><b>code</b></a>]
-		</td>
-	</tr>
+        /* Blog Posts */
+        a.blog-card { display: block; text-decoration: none; border-bottom: none; color: inherit; }
+        .blog-title { font-size: 1.6rem; font-weight: 700; font-family: 'Patrick Hand SC', cursive; margin-bottom: 10px; text-decoration: underline; text-decoration-thickness: 2px; text-decoration-color: var(--pencil-gray); }
+        a.blog-card:hover .blog-title { text-decoration-color: var(--ink-primary); }
+        .blog-excerpt { color: var(--ink-secondary); font-size: 1.05rem; margin-bottom: 16px; }
+        .blog-meta { font-family: 'Patrick Hand SC', cursive; font-size: 0.95rem; color: var(--pencil-gray); border-top: 1px dashed var(--pencil-gray); padding-top: 10px; display: flex; gap: 16px; }
 
-	<tr>
-		<td><center><img width="250" src="./pic/2021/nips2021_care.png"></center></td>
-		<td>
-			<font size="2">Revitalizing CNN Attentions via Transformers in Self-Supervised Visual Representation Learning,
-			<br>
-			<i><b>Chongjian Ge</b>, Youwei Liang, Yibing Song, Jianbo Jiao, Jue Wang, and Ping Luo</i>
-			<br>Advances in Neural Information Processing Systems (<b>NeurIPS</b>) 2021
-			<br>
-			[<a href='https://arxiv.org/abs/2110.05340'><b>paper</b></a>|<a href='https://github.com/ChongjianGE/CARE'><b>code</b></a>|<a href='https://mp.weixin.qq.com/s/oGS4XSjO29fHdDQXV1vyvg'><b>media report</b></a>]
-		</td>
-	</tr>
+        /* Other sections */
+        .news-list { list-style: none; padding-left: 20px; }
+        .news-item { display: flex; margin-bottom: 16px; position: relative; }
+        .news-item::before { content: ''; position: absolute; left: -24px; top: 10px; width: 12px; height: 12px; background: var(--ink-primary); border-radius: 40% 60% 50% 70%; }
+        .news-date { font-family: 'Patrick Hand SC', cursive; font-weight: bold; min-width: 90px; }
+        .highlight-text { font-weight: bold; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='10' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpath d='M0,8 Q25,2 50,8 T100,8' stroke='%23222' stroke-width='2' fill='none' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E"); background-repeat: repeat-x; background-position: bottom; background-size: auto 4px; padding-bottom: 2px; }
+        
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+        .award-list { list-style: none; padding: 0; }
+        .award-item { display: flex; justify-content: space-between; margin-bottom: 16px; border-bottom: 2px dotted var(--pencil-gray); padding-bottom: 8px; }
+        .award-year { font-family: 'Patrick Hand SC', cursive; font-weight: bold; }
+        .service-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+        .service-tag { border: 2px solid var(--ink-secondary); padding: 4px 10px; border-radius: 15px 20px 18px 22px; font-family: 'Patrick Hand SC', cursive; font-size: 0.9rem; color: var(--ink-secondary); }
+        .footer { text-align: center; padding: 60px 0 40px; color: var(--ink-secondary); font-family: 'Patrick Hand SC', cursive; border-top: 3px double var(--pencil-gray); margin-top: 40px; }
 
-	<tr>
-		<td><center><img width="250" src="./pic/2021/cvpr2021_dcton.png"></center></td>
-		<td>
-			<font size="2">Disentangled Cycle Consistency for Highly-realistic Virtual Try-On,
-			<br>
-			<i><b>Chongjian Ge</b>, Yibing Song, Yuying Ge, Han Yang, Wei Liu, and Ping Luo</i>
-			<br>IEEE/CVF Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>) 2021
-			<br>
-			[<a href='https://arxiv.org/abs/2103.09479'><b>paper</b></a>|<a href='https://github.com/ChongjianGE/DCTON'><b>code</b></a>]
-		</td>
-	</tr>
+        /* --- SIMPLE MODAL STYLES (No Spin) --- */
+        .modal-overlay {
+            display: none;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(43, 43, 43, 0.7);
+            backdrop-filter: blur(4px);
+            z-index: 10000;
+            justify-content: center; align-items: center;
+            opacity: 0; transition: opacity 0.3s ease;
+        }
+        .modal-overlay.active { display: flex; opacity: 1; }
 
-	<tr>
-		<td><center><img width="250" src="./pic/2023/tip_neal.png"></center></td>
-		<td>
-			<font size="2">Rethinking Attentive Object Detection via Neural Attention Learning,
-			<br>
-			<i><b>Chongjian Ge</b>, Yibing Song, Chao Ma, Yuankai Qi and Ping Luo</i>
-			<br>JOURNAL OF IEEE TRANSACTIONS ON IMAGE PROCESSING (<b>TIP</b>) 
-			<br>
-			[<a href='https://ieeexplore.ieee.org/document/10186342'><b>paper</b></a>]
-		</td>
-	</tr>
+        .modal-card {
+            background: var(--card-bg);
+            width: 90%; max-width: 800px; max-height: 90vh;
+            overflow-y: auto;
+            border: 3px solid var(--ink-primary);
+            border-radius: var(--radius-sketch);
+            box-shadow: 8px 8px 0px var(--ink-primary);
+            padding: 40px;
+            position: relative;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+            /* Simple fade up effect */
+            opacity: 0; transform: scale(0.95) translateY(20px);
+            transition: all 0.3s ease-out;
+        }
 
-	<tr>
-		<td><center><img width="250" src="./pic/2022/arxiv_adaptformer.png"></center></td>
-		<td>
-			<font size="2">AdaptFormer: Adapting Vision Transformers for Scalable Visual Recognition,
-			<br>
-			<i>Shoufa Chen<span style="color:red; white-space: nowrap;">*</span>, <b>Chongjian Ge<span style="color:red; white-space: nowrap;">*</span></b>, Zhan Tong, Jiangliu Wang, Yibing Song, Jue Wang, and Ping Luo</i>
-			<br>Advances in Neural Information Processing Systems (<b>NeurIPS</b>) 2022
-			<br>
-			[<a href='https://arxiv.org/pdf/2205.13535.pdf'><b>paper</b></a>|<a href='https://github.com/ShoufaChen/AdaptFormer'><b>code</b></a>|<a href='http://www.shoufachen.com/adaptformer-page/'><b>project page</b></a>]
-		</td>
-	</tr>
+        .modal-overlay.active .modal-card { opacity: 1; transform: scale(1) translateY(0); }
 
-	<tr>
-		<td><center><img width="250" src="./pic/2022/iclr2022_evit.png"></center></td>
-		<td>
-			<font size="2">Not All Patches are What You Need: Expediting Vision Transformers via Token Reorganizations,
-			<br>
-			<i>Youwei Liang, <b>Chongjian Ge</b>, Zhan Tong, Yibing Song, Jue Wang, and Pengtao Xie</i>
-			<br>International Conference on Learning Representations (<b>ICLR</b>) 2022 (<b>Spotlight</b>)
-			<br>
-			[<a href='https://arxiv.org/pdf/2202.07800.pdf'><b>paper</b></a>|<a href='https://github.com/youweiliang/evit'><b>code</b></a>]
-		</td>
-	</tr>
+        .modal-close-btn {
+            position: absolute; top: 20px; right: 20px;
+            width: 40px; height: 40px;
+            border: 2px solid var(--ink-primary); border-radius: 50% 45% 55% 40%;
+            background: white; font-family: 'Patrick Hand SC', cursive; font-size: 1.5rem;
+            cursor: pointer; display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; z-index: 10;
+        }
+        .modal-close-btn:hover { background: var(--ink-primary); color: white; transform: rotate(90deg); }
 
-	<tr>
-		<td><center><img width="250" src="./pic/2022/iclr2022_cyclemlp.png"></center></td>
-		<td>
-			<font size="2">CycleMLP: A MLP-like Architecture for Dense Prediction,
-			<br>
-			<i>Shoufa Chen, Enze Xie, <b>Chongjian Ge</b>, Runjian Chen, Ding Liang, and Ping Luo</i>
-			<br>International Conference on Learning Representations (<b>ICLR</b>) 2022 (<b>Oral</b>)
-			<br>
-			[<a href='https://arxiv.org/abs/2107.10224'><b>paper</b></a>|<a href='https://github.com/ShoufaChen/CycleMLP'><b>code</b></a>|<a href='https://mp.weixin.qq.com/s/2ajLnRtLGgKMQ8Egxhe2FQ'><b>media report</b></a>]
-		</td>
-	</tr>
+        .modal-content-inner img, .modal-content-inner video {
+            width: 100%; border-radius: 4px; border: 2px solid var(--ink-primary);
+            margin-bottom: 20px; box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+        }
+        .modal-content-inner h3 { font-size: 2rem; margin-top: 0; border-bottom: 2px dashed var(--pencil-gray); padding-bottom: 10px; }
+        .modal-abstract { font-family: 'Lora', serif; font-size: 1.1rem; color: var(--ink-secondary); text-align: justify; margin-bottom: 20px; }
 
-	<tr>
-		<td><center><img width="250" src="./pic/2023/cyclemlp_pami.png"></center></td>
-		<td>
-			<font size="2">CycleMLP: A MLP-like Architecture for Dense Visual Predictions,
-			<br>
-			<i>Shoufa Chen, Enze Xie, <b>Chongjian Ge</b>, Runjian Chen, Ding Liang, and Ping Luo</i>
-			<br>IEEE Transactions on Pattern Analysis and Machine Intelligence (<b>T-PAMI</b>), 2023 
-			<br>
-			[<a href='https://ieeexplore.ieee.org/abstract/document/10210694'><b>paper</b></a>|<a href='https://github.com/ShoufaChen/CycleMLP'><b>code</b></a>]
-		</td>
-	</tr>
+        @media (max-width: 768px) {
+            .profile-section { flex-direction: column; align-items: center; text-align: center; }
+            .profile-photo-wrapper { margin-top: 0; margin-bottom: 20px; }
+            .nav-tabs { justify-content: center; }
+            .pub-item { grid-template-columns: 1fr; gap: 24px; }
+            .pub-img-wrapper { width: 100%; max-width: 400px; margin: 0 auto; }
+            .grid-2 { grid-template-columns: 1fr; }
+            .modal-card { padding: 20px; width: 95%; }
+        }
+    </style>
+</head>
+<body>
 
-	<tr>
-		<td><center><img width="250" src="./pic/2021/cvpr2021_pfafn.png"></center></td>
-		<td>
-			<font size="2">Parser-Free Virtual Try-on via Distilling Appearance Flows,
-			<br>
-			<i>Yuying Ge, Yibing Song, Ruimao Zhang, <b>Chongjian Ge</b>, Wei Liu, and Ping Luo</i>
-			<br>IEEE/CVF Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>) 2021
-			<br>
-			[<a href='https://arxiv.org/abs/2103.04559'><b>paper</b></a>|<a href='https://github.com/geyuying/PF-AFN'><b>code</b></a>]
-		</td>
-	</tr>
+<div class="container">
 
-	<tr>
-		<td><center><img width="250" src="./pic/2021/iccv2021_woo.png"></center></td>
-		<td>
-			<font size="2">Watch Only Once: An End-to-End Video Action Detection Framework,
-			<br>
-			<i>Shoufa Chen, Peize Sun, Enze Xie, <b>Chongjian Ge</b>, Jiannan Wu, Lan Ma, Jiajun Shen, and Ping Luo</i>
-			<br>IEEE/CVF International Conference on Computer Vision (<b>ICCV</b>) 2021
-			<br>
-			[<a href='https://openaccess.thecvf.com/content/ICCV2021/papers/Chen_Watch_Only_Once_An_End-to-End_Video_Action_Detection_Framework_ICCV_2021_paper.pdf'><b>paper</b></a>|<a href='https://github.com/ShoufaChen/WOO'><b>code</b></a>]
-		</td>
-	</tr>
+    <div class="sketch-card profile-section">
+        <div class="profile-photo-wrapper tape-effect">
+            <img src="./pic/banban.jpg" alt="Chongjian GE" class="sketch-img primary-img">
+            <img src="./pic/banban_all.png" alt="Alternate Photo" class="sketch-img secondary-img">
+        </div>
+        
+        <div class="profile-info">
+            <h1>Chongjian GE <span class="chinese-name">葛崇剑</span></h1>
+            
+            <div class="bio-text">
+                <p>
+                    Research Scientist at <a href="https://research.adobe.com/">Adobe Research</a>. 
+                    My work focuses on <b>Visual Generation Models</b>. 
+                    I received my Ph.D. from <a href="https://www.cs.hku.hk/">HKU</a> in 2024, advised by <a href="http://luoping.me/">Prof. Ping Luo</a>. Previously a visiting student at UC Berkeley with <a href="https://me.berkeley.edu/people/masayoshi-tomizuka/">Prof. Masayoshi Tomizuka</a>.
+                </p>
+                <p style="margin-top: 16px; font-family: 'Patrick Hand SC', cursive; font-size: 1.2rem;">
+                    <i class="fas fa-pencil-alt" style="margin-right: 8px;"></i> We are actively hiring self-motivated interns at Adobe Research.
+                </p>
+            </div>
+            
+            <div class="contact-pills">
+                <a href="mailto:rhettgee1995@gmail.com" class="pill"><i class="fas fa-envelope" style="margin-right:8px;"></i> Email</a>
+                <a href="https://scholar.google.com/citations?user=Zusxnl8AAAAJ" class="pill"><i class="fas fa-graduation-cap" style="margin-right:8px;"></i> Scholar</a>
+                <a href="https://github.com/ChongjianGE" class="pill"><i class="fab fa-github" style="margin-right:8px;"></i> Github</a>
+                
+            </div>
 
-	<tr>
-		<td><center><img width="250" src="./pic/2023/deepaccident.png"></center></td>
-		<td>
-			<font size="2">DeepAccident: A Motion and Accident Prediction Benchmark for V2X Autonomous Driving,
-			<br>
-			<i>Tianqi Wang, Sukmin Kim, Wenxuan Ji, Enze Xie, <b>Chongjian Ge</b>, Junsong Chen, Zhenguo Li, Ping Luo</i>
-			<br>The Association for the Advancement of Artificial Intelligence (<b>AAAI</b>) 2023
-			<br>
-			[<a href='https://arxiv.org/pdf/2304.01168.pdf'><b>paper</b></a>|<a href='https://deepaccident.github.io'><b>homepage</b></a>]
-		</td>
-	</tr>
-
-	<tr>
-		<td><center><img width="250" src="./pic/2024/iclr24_instructdet.png"></center></td>
-		<td>
-			<font size="2">InstructDET: Diversifying Referring Object Detection with Generalized Instructions,
-			<br>
-			<i>Ronghao Dang, Jiangyan Feng, Haodong Zhang, <b>Chongjian Ge,</b> Lin Song, Lijun Gong, Chengju Liu, Qijun Chen, Feng Zhu, Rui Zhao, Yibing Song</i>
-			<br>International Conference on Learning Representations (<b>ICLR</b>) 2024 
-			<br>
-			[<a href='https://arxiv.org/pdf/2310.05136.pdf'><b>paper</b></a>|<a href='https://github.com/jyFengGoGo/InstructDet'><b>code</b></a>]
-		</td>
-	</tr>
-
-	<tr>
-		<td><center><img width="250" src="./pic/2022/nips_amos.png"></center></td>
-		<td>
-			<font size="2">AMOS: A Large-Scale Abdominal Multi-Organ Benchmark for Versatile Medical Image Segmentation,
-			<br>
-			<i>Yuanfeng Ji, Haotian Bai, <b>Chongjian Ge</b>, Jie Yang, Ye Zhu, Ruimao Zhang, Zhen Li, Lingyan Zhang, Wanling Ma, Xiang Wan, Ping Luo</i>
-			<br>Advances in Neural Information Processing Systems (<b>NeurIPS</b> 2022 Track Datasets and Benchmarks) (<b>Oral</b>)
-			<br>
-			[<a href='https://arxiv.org/pdf/2206.08023.pdf'><b>paper</b></a>|<a href='https://amos22.grand-challenge.org/'><b>project page</b></a>]
-		</td>
-	</tr>
-
-	</tbody>
-</table>
-
-
-<h2><font>Honors and Awards</font></h2>
-<div class="awards-container">
-    <div class="award-card">
-        <div class="award-year">2023</div>
-        <div class="award-content">
-            <div class="award-title">CVPR Outstanding Reviewer</div>
-            <div class="award-desc">Recognition for exceptional contribution to peer review process</div>
+            <div class="nav-tabs">
+                <button class="nav-tab-btn active" onclick="showSection('research')">
+                    <i class="fas fa-atom"></i> Research
+                </button>
+                <button class="nav-tab-btn" onclick="showSection('posts')">
+                    <i class="fas fa-pen-nib"></i> Posts
+                </button>
+            </div>
         </div>
     </div>
-    
-    <div class="award-card">
-        <div class="award-year">2020-2024</div>
-        <div class="award-content">
-            <div class="award-title">Hong Kong PhD Fellowship Scheme (HKPFS)</div>
-            <div class="award-desc">Prestigious fellowship awarded by HKU for outstanding PhD candidates</div>
-        </div>
-    </div>
-    
-    <div class="award-card">
-        <div class="award-year">2020-2021</div>
-        <div class="award-content">
-            <div class="award-title">YS and Christabel Lung Postgraduate Scholarship</div>
-            <div class="award-desc">Merit-based scholarship from HKU</div>
-        </div>
-    </div>
-    
-</div>
 
+    <div id="section-research">
+        
+        <!-- <div class="sketch-card">
+            <h2><i class="far fa-calendar-alt"></i> Latest News</h2>
+            <ul class="news-list">
+                <li class="news-item">
+                    <span class="news-date">02/2025</span>
+                    <span class="news-content">Two papers accepted to <b>CVPR 2025</b>. <span class="highlight-text">(One Highlight)</span></span>
+                </li>
+                <li class="news-item">
+                    <span class="news-date">01/2024</span>
+                    <span class="news-content">Three papers accepted to <b>ICLR 2024</b>. <span class="highlight-text">(One Spotlight)</span></span>
+                </li>
+                <li class="news-item">
+                    <span class="news-date">12/2023</span>
+                    <span class="news-content">One paper accepted to <b>AAAI 2024</b>.</span>
+                </li>
+                <li class="news-item">
+                    <span class="news-date">09/2022</span>
+                    <span class="news-content">NeurIPS 2022 acceptance. <span class="highlight-text">(Oral Presentation)</span></span>
+                </li>
+            </ul>
+        </div> -->
 
+        <div class="sketch-card">
+            <h2><i class="fas fa-book"></i>Publications</h2>
+            <div style="font-family: 'Patrick Hand SC', cursive; color: var(--ink-secondary); margin-bottom: 24px; border-bottom: 2px dotted var(--pencil-gray); padding-bottom: 8px; font-size: 1.4rem;">
+                (* indicates equal contribution, # indicates corresponding author)
+            </div>
 
-<h2><font>Academic Service</font></h2>
-<div class="service-container">
-    <div class="service-card">
-        <div class="service-header">
-            <i class="fas fa-graduation-cap"></i>
-            <h3>Conference Review</h3>
+            <div class="pub-item" data-pub-id="awm">
+                <div class="pub-img-wrapper" onclick="openModal(this)">
+                    <img src="./pic/2025/awm.png" alt="AWM" class="sketch-img">
+                </div>
+                <div class="pub-details">
+                    <div class="pub-title">Advantage Weighted Matching: Aligning RL with Pretraining in Diffusion Models</div>
+                    <div class="pub-authors">Shuchen Xue, <span class="me">Chongjian Ge#</span>, Shilong Zhang, Yichen Li, Zhi-Ming Ma.</div>
+                    <div class="pub-venue">arXiv Preprint 2025</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2509.25050" class="pub-link-btn">Paper</a>
+                        <a href="https://github.com/scxue/advantage_weighted_matching" class="pub-link-btn">Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-item" data-pub-id="mimix">
+                <div class="pub-img-wrapper" onclick="openModal(this)">
+                    <img src="./pic/2025/mimix.png" alt="Mimix" class="sketch-img">
+                </div>
+                <div class="pub-details">
+                    <div class="pub-title">Character Mixing for Video Generation</div>
+                    <div class="pub-authors">Tingting Liao, <span class="me">Chongjian Ge</span>, Guangyi Liu, Hao Li, Yi Zhou.</div>
+                    <div class="pub-venue">arXiv Preprint 2025</div>
+                    <div class="pub-links">
+                        <a href="https://tingtingliao.github.io/mimix/" class="pub-link-btn project">Project</a>
+                        <a href="https://arxiv.org/abs/2510.05093" class="pub-link-btn">Paper</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-item" data-pub-id="pixflow">
+                <div class="pub-img-wrapper" onclick="openModal(this)">
+                    <img src="./pic/2025/pixflow.png" alt="PixelFlow" class="sketch-img">
+                </div>
+                <div class="pub-details">
+                    <div class="pub-title">PixelFlow: Pixel-Space Generative Models with Flow</div>
+                    <div class="pub-authors">Shoufa Chen, <span class="me">Chongjian Ge</span>, Shilong Zhang, Peize Sun, Ping Luo.</div>
+                    <div class="pub-venue">arXiv Preprint 2025</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/pdf/2504.07963" class="pub-link-btn">Paper</a>
+                        <a href="https://github.com/ShoufaChen/PixelFlow" class="pub-link-btn">Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-item" data-pub-id="goku">
+                <div class="pub-img-wrapper" onclick="openModal(this)">
+                    <video autoplay loop muted playsinline class="sketch-img keep-color">
+                        <source src="./pic/2025/goku.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="pub-details">
+                    <div class="pub-title">Goku: Flow Based Video Generative Foundation Models</div>
+                    <div class="pub-authors">Shoufa Chen*, <span class="me">Chongjian Ge*</span>, Yuqi Zhang, Yida Zhang, Fengda Zhu, Hao Yang, Hongxiang Hao, Hui Wu, Zhichao Lai, Yifei Hu, Ting-Che Lin, Shilong Zhang, Fu Li, Chuan Li, Xing Wang, Yanghua Peng, Peize Sun, Ping Luo, Yi Jiang, Zehuan Yuan, Bingyue Peng, Xiaobing Liu.</div>
+                    <div class="pub-venue">CVPR 2025 <span class="venue-highlight">Highlight</span></div>
+                    <div class="pub-links">
+                        <a href="https://saiyan-world.github.io/goku/" class="pub-link-btn project">Project</a>
+                        <a href="https://arxiv.org/abs/2502.04896" class="pub-link-btn">Paper</a>
+                        <a href="https://github.com/Saiyan-World/goku" class="pub-link-btn">Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-item" data-pub-id="compgs">
+                <div class="pub-img-wrapper" onclick="openModal(this)">
+                    <img src="./pic/2024/compGS_arxiv.png" alt="CompGS" class="sketch-img">
+                </div>
+                <div class="pub-details">
+                    <div class="pub-title">CompGS: Unleashing 2D Compositionality for Compositional Text-to-3D</div>
+                    <div class="pub-authors"><span class="me">Chongjian Ge</span>, Chenfeng Xu, Yuanfeng Ji, Chensheng Peng, Masayoshi Tomizuka, Ping Luo, Mingyu Ding+, Varun Jampani+, Wei Zhan.</div>
+                    <div class="pub-venue">CVPR 2025</div>
+                    <div class="pub-links">
+                        <a href="https://chongjiange.github.io/subpages/compgs.html" class="pub-link-btn project">Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-item" data-pub-id="pixart_sigma">
+                <div class="pub-img-wrapper" onclick="openModal(this)">
+                    <img src="./pic/2024/pixart_sigma.png" alt="PixArt-Sigma" class="sketch-img">
+                </div>
+                <div class="pub-details">
+                    <div class="pub-title">PixArt-Σ: Weak-to-Strong Training of Diffusion Transformer for 4K Text-to-Image</div>
+                    <div class="pub-authors">Junsong Chen*, <span class="me">Chongjian Ge*</span>, Enze Xie*, Yue Wu*, Lewei Yao, Xiaozhe Ren, Zhongdao Wang, Ping Luo, Huchuan Lu, Zhenguo Li.</div>
+                    <div class="pub-venue">ECCV 2024</div>
+                    <div class="pub-links">
+                        <a href="https://pixart-alpha.github.io/PixArt-sigma-project/" class="pub-link-btn project">Project</a>
+                        <a href="https://arxiv.org/abs/2403.04692" class="pub-link-btn">Paper</a>
+                        <a href="https://github.com/PixArt-alpha/PixArt-sigma" class="pub-link-btn">Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-item" data-pub-id="pixart_alpha">
+                <div class="pub-img-wrapper" onclick="openModal(this)">
+                    <img src="./pic/2023/arxiv_pixart.png" alt="PixArt-Alpha" class="sketch-img">
+                </div>
+                <div class="pub-details">
+                    <div class="pub-title">PIXART-α: Fast Training of Diffusion Transformer for Photorealistic Text-to-Image Synthesis</div>
+                    <div class="pub-authors">Junsong Chen*, Jincheng Yu*, <span class="me">Chongjian Ge*</span>, Lewei Yao*, Enze Xie, Yue Wu, Zhongdao Wang, James Kwok, Ping Luo, Huchuan Lu, Zhenguo Li.</div>
+                    <div class="pub-venue">ICLR 2024 <span class="venue-highlight">Spotlight</span></div>
+                    <div class="pub-links">
+                        <a href="http://pixart-alpha.github.io/" class="pub-link-btn project">Project</a>
+                        <a href="https://arxiv.org/abs/2310.00426" class="pub-link-btn">Paper</a>
+                        <a href="https://github.com/PixArt-alpha/PixArt-alpha" class="pub-link-btn">Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-item" data-pub-id="metabev">
+                <div class="pub-img-wrapper" onclick="openModal(this)">
+                    <img src="./pic/2023/iccv_metabev.png" alt="MetaBEV" class="sketch-img">
+                </div>
+                <div class="pub-details">
+                    <div class="pub-title">MetaBEV: Solving Sensor Failures for BEV Detection and Map Segmentation</div>
+                    <div class="pub-authors"><span class="me">Chongjian Ge*</span>, Junsong Chen*, Enze Xie, Zhongdao Wang, Lanqing Hong, Huchuan Lu, Zhenguo Li, Ping Luo.</div>
+                    <div class="pub-venue">ICCV 2023</div>
+                    <div class="pub-links">
+                        <a href="https://chongjiange.github.io/subpages/metabev.html" class="pub-link-btn project">Project</a>
+                        <a href="https://arxiv.org/abs/2304.09801" class="pub-link-btn">Paper</a>
+                        <a href="https://github.com/ChongjianGE/MetaBEV" class="pub-link-btn">Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-item" data-pub-id="groupmixformer">
+                <div class="pub-img-wrapper" onclick="openModal(this)">
+                    <img src="./pic/2023/iccv_groupmixformer.png" alt="GroupMixFormer" class="sketch-img">
+                </div>
+                <div class="pub-details">
+                    <div class="pub-title">Advancing Vision Transformers with Group-Mix Attention</div>
+                    <div class="pub-authors"><span class="me">Chongjian Ge</span>, Xiaohan Ding, Zhan Tong, Li Yuan, Jiangliu Wang, Yibing Song, Ping Luo.</div>
+                    <div class="pub-venue">arXiv Preprint</div>
+                    <div class="pub-links">
+                        <a href="https://chongjiange.github.io/subpages/gma" class="pub-link-btn project">Project</a>
+                        <a href="https://arxiv.org/abs/2311.15157" class="pub-link-btn">Paper</a>
+                        <a href="https://github.com/AILab-CVC/GroupMixFormer" class="pub-link-btn">Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-item" data-pub-id="auto_bench">
+                <div class="pub-img-wrapper" onclick="openModal(this)">
+                    <img src="./pic/2023/auto_bench.png" alt="Auto-Bench" class="sketch-img">
+                </div>
+                <div class="pub-details">
+                    <div class="pub-title">Large Language Models as Automated Aligners for benchmarking Vision-Language Models</div>
+                    <div class="pub-authors">Yuanfeng Ji*, <span class="me">Chongjian Ge*</span>, Weikai Kong, Enze Xie, Zhengying Liu, Zhengguo Li, Ping Luo.</div>
+                    <div class="pub-venue">ICLR 2024</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2311.14580" class="pub-link-btn">Paper</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-item" data-pub-id="snclr">
+                <div class="pub-img-wrapper" onclick="openModal(this)">
+                    <img src="./pic/2023/iclr23_snclr.png" alt="SNCLR" class="sketch-img">
+                </div>
+                <div class="pub-details">
+                    <div class="pub-title">Soft Neighbors Are Positive Supporters in Contrastive Visual Representation Learning</div>
+                    <div class="pub-authors"><span class="me">Chongjian Ge</span>, Jiangliu Wang, Zhan Tong, Shoufa Chen, Yibing Song, Ping Luo.</div>
+                    <div class="pub-venue">ICLR 2023</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2303.17142" class="pub-link-btn">Paper</a>
+                        <a href="https://github.com/ChongjianGE/SNCLR" class="pub-link-btn">Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-item" data-pub-id="adaptformer">
+                <div class="pub-img-wrapper" onclick="openModal(this)">
+                    <img src="./pic/2022/arxiv_adaptformer.png" alt="AdaptFormer" class="sketch-img">
+                </div>
+                <div class="pub-details">
+                    <div class="pub-title">AdaptFormer: Adapting Vision Transformers for Scalable Visual Recognition</div>
+                    <div class="pub-authors">Shoufa Chen*, <span class="me">Chongjian Ge*</span>, Zhan Tong, Jiangliu Wang, Yibing Song, Jue Wang, Ping Luo.</div>
+                    <div class="pub-venue">NeurIPS 2022</div>
+                    <div class="pub-links">
+                        <a href="http://www.shoufachen.com/adaptformer-page/" class="pub-link-btn project">Project</a>
+                        <a href="https://arxiv.org/pdf/2205.13535.pdf" class="pub-link-btn">Paper</a>
+                        <a href="https://github.com/ShoufaChen/AdaptFormer" class="pub-link-btn">Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-item" data-pub-id="evit">
+                <div class="pub-img-wrapper" onclick="openModal(this)">
+                    <img src="./pic/2022/iclr2022_evit.png" alt="EViT" class="sketch-img">
+                </div>
+                <div class="pub-details">
+                    <div class="pub-title">Not All Patches are What You Need: Expediting Vision Transformers via Token Reorganizations</div>
+                    <div class="pub-authors">Youwei Liang, <span class="me">Chongjian Ge</span>, Zhan Tong, Yibing Song, Jue Wang, Pengtao Xie.</div>
+                    <div class="pub-venue">ICLR 2022 <span class="venue-highlight">Spotlight</span></div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/pdf/2202.07800.pdf" class="pub-link-btn">Paper</a>
+                        <a href="https://github.com/youweiliang/evit" class="pub-link-btn">Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-item" data-pub-id="cyclemlp">
+                <div class="pub-img-wrapper" onclick="openModal(this)">
+                    <img src="./pic/2022/iclr2022_cyclemlp.png" alt="CycleMLP" class="sketch-img">
+                </div>
+                <div class="pub-details">
+                    <div class="pub-title">CycleMLP: A MLP-like Architecture for Dense Prediction</div>
+                    <div class="pub-authors">Shoufa Chen, Enze Xie, <span class="me">Chongjian Ge</span>, Runjian Chen, Ding Liang, Ping Luo.</div>
+                    <div class="pub-venue">ICLR 2022 <span class="venue-highlight">Oral</span></div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2107.10224" class="pub-link-btn">Paper</a>
+                        <a href="https://github.com/ShoufaChen/CycleMLP" class="pub-link-btn">Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-item" data-pub-id="cyclemlp_pami">
+                <div class="pub-img-wrapper" onclick="openModal(this)">
+                    <img src="./pic/2023/cyclemlp_pami.png" alt="CycleMLP-PAMI" class="sketch-img">
+                </div>
+                <div class="pub-details">
+                    <div class="pub-title">CycleMLP: A MLP-like Architecture for Dense Visual Predictions</div>
+                    <div class="pub-authors">Shoufa Chen, Enze Xie, <span class="me">Chongjian Ge</span>, Runjian Chen, Ding Liang, Ping Luo.</div>
+                    <div class="pub-venue">T-PAMI 2023</div>
+                    <div class="pub-links">
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10210694" class="pub-link-btn">Paper</a>
+                        <a href="https://github.com/ShoufaChen/CycleMLP" class="pub-link-btn">Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-item" data-pub-id="care">
+                <div class="pub-img-wrapper" onclick="openModal(this)">
+                    <img src="./pic/2021/nips2021_care.png" alt="CARE" class="sketch-img">
+                </div>
+                <div class="pub-details">
+                    <div class="pub-title">Revitalizing CNN Attentions via Transformers in Self-Supervised Visual Representation Learning</div>
+                    <div class="pub-authors"><span class="me">Chongjian Ge</span>, Youwei Liang, Yibing Song, Jianbo Jiao, Jue Wang, Ping Luo.</div>
+                    <div class="pub-venue">NeurIPS 2021</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2110.05340" class="pub-link-btn">Paper</a>
+                        <a href="https://github.com/ChongjianGE/CARE" class="pub-link-btn">Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-item" data-pub-id="dcton">
+                <div class="pub-img-wrapper" onclick="openModal(this)">
+                    <img src="./pic/2021/cvpr2021_dcton.png" alt="DCTON" class="sketch-img">
+                </div>
+                <div class="pub-details">
+                    <div class="pub-title">Disentangled Cycle Consistency for Highly-realistic Virtual Try-On</div>
+                    <div class="pub-authors"><span class="me">Chongjian Ge</span>, Yibing Song, Yuying Ge, Han Yang, Wei Liu, Ping Luo.</div>
+                    <div class="pub-venue">CVPR 2021</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2103.09479" class="pub-link-btn">Paper</a>
+                        <a href="https://github.com/ChongjianGE/DCTON" class="pub-link-btn">Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-item" data-pub-id="neal">
+                <div class="pub-img-wrapper" onclick="openModal(this)">
+                    <img src="./pic/2023/tip_neal.png" alt="NEAL" class="sketch-img">
+                </div>
+                <div class="pub-details">
+                    <div class="pub-title">Rethinking Attentive Object Detection via Neural Attention Learning</div>
+                    <div class="pub-authors"><span class="me">Chongjian Ge</span>, Yibing Song, Chao Ma, Yuankai Qi, Ping Luo.</div>
+                    <div class="pub-venue">TIP 2023</div>
+                    <div class="pub-links">
+                        <a href="https://ieeexplore.ieee.org/document/10186342" class="pub-link-btn">Paper</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-item" data-pub-id="pfafn">
+                <div class="pub-img-wrapper" onclick="openModal(this)">
+                    <img src="./pic/2021/cvpr2021_pfafn.png" alt="PFAFN" class="sketch-img">
+                </div>
+                <div class="pub-details">
+                    <div class="pub-title">Parser-Free Virtual Try-on via Distilling Appearance Flows</div>
+                    <div class="pub-authors">Yuying Ge, Yibing Song, Ruimao Zhang, <span class="me">Chongjian Ge</span>, Wei Liu, Ping Luo.</div>
+                    <div class="pub-venue">CVPR 2021</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2103.04559" class="pub-link-btn">Paper</a>
+                        <a href="https://github.com/geyuying/PF-AFN" class="pub-link-btn">Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-item" data-pub-id="woo">
+                <div class="pub-img-wrapper" onclick="openModal(this)">
+                    <img src="./pic/2021/iccv2021_woo.png" alt="WOO" class="sketch-img">
+                </div>
+                <div class="pub-details">
+                    <div class="pub-title">Watch Only Once: An End-to-End Video Action Detection Framework</div>
+                    <div class="pub-authors">Shoufa Chen, Peize Sun, Enze Xie, <span class="me">Chongjian Ge</span>, Jiannan Wu, Lan Ma, Jiajun Shen, Ping Luo.</div>
+                    <div class="pub-venue">ICCV 2021</div>
+                    <div class="pub-links">
+                        <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Chen_Watch_Only_Once_An_End-to-End_Video_Action_Detection_Framework_ICCV_2021_paper.pdf" class="pub-link-btn">Paper</a>
+                        <a href="https://github.com/ShoufaChen/WOO" class="pub-link-btn">Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-item" data-pub-id="deepaccident">
+                <div class="pub-img-wrapper" onclick="openModal(this)">
+                    <img src="./pic/2023/deepaccident.png" alt="DeepAccident" class="sketch-img">
+                </div>
+                <div class="pub-details">
+                    <div class="pub-title">DeepAccident: A Motion and Accident Prediction Benchmark for V2X Autonomous Driving</div>
+                    <div class="pub-authors">Tianqi Wang, Sukmin Kim, Wenxuan Ji, Enze Xie, <span class="me">Chongjian Ge</span>, Junsong Chen, Zhenguo Li, Ping Luo.</div>
+                    <div class="pub-venue">AAAI 2024</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/pdf/2304.01168.pdf" class="pub-link-btn">Paper</a>
+                        <a href="https://deepaccident.github.io" class="pub-link-btn project">Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-item" data-pub-id="instructdet">
+                <div class="pub-img-wrapper" onclick="openModal(this)">
+                    <img src="./pic/2024/iclr24_instructdet.png" alt="InstructDET" class="sketch-img">
+                </div>
+                <div class="pub-details">
+                    <div class="pub-title">InstructDET: Diversifying Referring Object Detection with Generalized Instructions</div>
+                    <div class="pub-authors">Ronghao Dang, Jiangyan Feng, Haodong Zhang, <span class="me">Chongjian Ge</span>, Lin Song, Lijun Gong, Chengju Liu, Qijun Chen, Feng Zhu, Rui Zhao, Yibing Song.</div>
+                    <div class="pub-venue">ICLR 2024</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/pdf/2310.05136.pdf" class="pub-link-btn">Paper</a>
+                        <a href="https://github.com/jyFengGoGo/InstructDet" class="pub-link-btn">Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-item" data-pub-id="amos">
+                <div class="pub-img-wrapper" onclick="openModal(this)">
+                    <img src="./pic/2022/nips_amos.png" alt="AMOS" class="sketch-img">
+                </div>
+                <div class="pub-details">
+                    <div class="pub-title">AMOS: A Large-Scale Abdominal Multi-Organ Benchmark for Versatile Medical Image Segmentation</div>
+                    <div class="pub-authors">Yuanfeng Ji, Haotian Bai, <span class="me">Chongjian Ge</span>, Jie Yang, Ye Zhu, Ruimao Zhang, Zhen Li, Lingyan Zhang, Wanling Ma, Xiang Wan, Ping Luo.</div>
+                    <div class="pub-venue">NeurIPS 2022 Track Datasets and Benchmarks <span class="venue-highlight">Oral</span></div>
+                    <div class="pub-links">
+                        <a href="https://amos22.grand-challenge.org/" class="pub-link-btn project">Project</a>
+                        <a href="https://arxiv.org/pdf/2206.08023.pdf" class="pub-link-btn">Paper</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div class="service-content">
-            <div class="conference-group">
-                <div class="conference-list">
-                    <span class="conference-item">CVPR</span>
-                    <span class="conference-item">ICCV</span>
-                    <span class="conference-item">ECCV</span>
-                    <span class="conference-item">NeurIPS</span>
-                    <span class="conference-item">ICML</span>
-                    <span class="conference-item">ICLR</span>
-					<span class="conference-item">SIGGRAPH</span>
-                    <span class="conference-item">ACMMM</span>
-                    <span class="conference-item">WACV</span>
+
+        <div class="grid-2">
+            <div class="sketch-card">
+                <h2><i class="fas fa-award"></i> Honors</h2>
+                <ul class="award-list">
+                    <li class="award-item">
+                        <span>CVPR Outstanding Reviewer</span>
+                        <span class="award-year">2023</span>
+                    </li>
+                    <li class="award-item">
+                        <span>HKPFS Fellowship (HKU)</span>
+                        <span class="award-year">2020-24</span>
+                    </li>
+                    <li class="award-item">
+                        <span>YS and Christabel Lung Scholarship</span>
+                        <span class="award-year">2020</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sketch-card">
+                <h2><i class="fas fa-coffee"></i> Service</h2>
+                <div class="service-block" style="margin-bottom: 24px;">
+                    <strong>Conference Reviewer</strong>
+                    <div class="service-tags">
+                        <span class="service-tag">CVPR</span>
+                        <span class="service-tag">ICCV</span>
+                        <span class="service-tag">ECCV</span>
+                        <span class="service-tag">NeurIPS</span>
+                        <span class="service-tag">ICML</span>
+                        <span class="service-tag">ICLR</span>
+                        <span class="service-tag">SIGGRAPH</span>
+                    </div>
+                </div>
+                <div class="service-block">
+                    <strong>Journal Reviewer</strong>
+                    <div class="service-tags">
+                        <span class="service-tag">TPAMI</span>
+                        <span class="service-tag">TIP</span>
+                        <span class="service-tag">JBHI</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <div class="service-card">
-        <div class="service-header">
-            <i class="fas fa-book-open"></i>
-            <h3>Journal Review</h3>
-        </div>
-        <div class="service-content">
-            <div class="journal-list">
-                <div class="journal-item">IEEE TPAMI</div>
-                <div class="journal-item">IEEE TIP</div>
-                <div class="journal-item">IEEE Access</div>
-                <div class="journal-item">IEEE JBHI</div>
+    </div> <div id="section-posts" style="display: none;">
+        
+        <a href="posts/posts.html" class="sketch-card blog-card">
+            <div class="blog-title">PlaceHolder</div>
+            <div class="blog-excerpt">
+                PlaceHolder
             </div>
-        </div>
+            <div class="blog-meta">
+                <span><i class="far fa-calendar"></i> Dec 2, 2025</span>
+                <span><i class="far fa-clock"></i> 0 min</span>
+                <span><i class="far fa-user"></i> Chongjian GE</span>
+            </div>
+        </a>
+
+    </div> <footer class="footer">
+        <p>© Chongjian GE | From my homepage | Last updated: Dec. 2025</p>
+    </footer>
+
+</div>
+
+<div class="modal-overlay" id="projectModal" onclick="closeModal(event)">
+    <div class="modal-card" onclick="event.stopPropagation()">
+        <button class="modal-close-btn" onclick="closeModal(event)">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-content-inner" id="modalBody">
+            </div>
     </div>
 </div>
 
+<script>
+    // 1. Tab Switching Logic
+    function showSection(sectionName) {
+        const researchSec = document.getElementById('section-research');
+        const postsSec = document.getElementById('section-posts');
+        const btns = document.querySelectorAll('.nav-tab-btn');
 
+        if (sectionName === 'research') {
+            researchSec.style.display = 'block';
+            postsSec.style.display = 'none';
+            btns[0].classList.add('active');
+            btns[1].classList.remove('active');
+        } else {
+            researchSec.style.display = 'none';
+            postsSec.style.display = 'block';
+            btns[0].classList.remove('active');
+            btns[1].classList.add('active');
+        }
+    }
 
-<p><center><font>
-<br>&copy; Chongjian GE | Last updated: Feb. 2025 | <a href="photography/index.html">.</a> </font></center>
-</p>
+    // 2. Load publication abstracts from JSON
+    let publicationsData = null;
 
-</div>
+    async function loadPublications() {
+        if (!publicationsData) {
+            try {
+                const response = await fetch('./abstracts/publications.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                publicationsData = await response.json();
+            } catch (error) {
+                console.error('Error loading publications:', error);
+                throw error;
+            }
+        }
+        return publicationsData;
+    }
+
+    // 3. Simple Modal Logic with JSON loading
+    async function openModal(element) {
+        console.log('openModal called with element:', element);
+        try {
+            const pubItem = element.closest('.pub-item');
+            console.log('Found pub-item:', pubItem);
+            if (!pubItem) {
+                console.error('No pub-item found');
+                return;
+            }
+
+            const pubId = pubItem.dataset.pubId;
+            if (!pubId) {
+                console.error('No data-pub-id found on element');
+                return;
+            }
+
+            const pubs = await loadPublications();
+            const pubData = pubs[pubId];
+
+            if (!pubData) {
+                console.error(`No publication data found for ID: ${pubId}`);
+                return;
+            }
+
+            const modalBody = document.getElementById('modalBody');
+            if (!modalBody) {
+                console.error('Modal body element not found');
+                return;
+            }
+
+            // Build modal content
+            let mediaHtml = '';
+            if (pubData.isVideo) {
+                mediaHtml = `<video autoplay loop muted controls playsinline style="width:100%; border-radius:8px; margin-bottom:15px;">
+                    <source src="${pubData.image}" type="video/mp4">
+                </video>`;
+            } else {
+                mediaHtml = `<img src="${pubData.image}" alt="${pubData.title}" style="width:100%;">`;
+            }
+
+            modalBody.innerHTML = `
+                ${mediaHtml}
+                <h3>${pubData.title}</h3>
+                <div class="modal-abstract">
+                    <p><b>Abstract:</b> ${pubData.abstract}</p>
+                </div>
+            `;
+
+            const modal = document.getElementById('projectModal');
+            if (!modal) {
+                console.error('Modal element not found');
+                return;
+            }
+
+            modal.style.display = 'flex';
+
+            setTimeout(() => {
+                modal.classList.add('active');
+            }, 10);
+
+            document.body.style.overflow = 'hidden';
+        } catch (error) {
+            console.error('Error in openModal:', error);
+        }
+    }
+
+    function closeModal(event) {
+        const modal = document.getElementById('projectModal');
+        modal.classList.remove('active');
+        
+        setTimeout(() => {
+            modal.style.display = 'none';
+            document.getElementById('modalBody').innerHTML = '';
+            document.body.style.overflow = 'auto';
+        }, 300);
+    }
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === "Escape") {
+            closeModal();
+        }
+    });
+
+    // Initialize: Preload publications data when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('Page loaded, preloading publications data...');
+        loadPublications()
+            .then(data => {
+                console.log('Publications loaded successfully:', Object.keys(data).length, 'publications');
+            })
+            .catch(error => {
+                console.error('Failed to preload publications:', error);
+            });
+    });
+</script>
+
 </body>
 </html>
