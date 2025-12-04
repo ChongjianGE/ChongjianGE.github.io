@@ -374,8 +374,26 @@
 
         <div class="sketch-card">
             <h2><i class="fas fa-book"></i>Publications</h2>
-            <div style="font-family: 'Patrick Hand SC', cursive; color: var(--ink-secondary); margin-bottom: 24px; border-bottom: 2px dotted var(--pencil-gray); padding-bottom: 8px; font-size: 1.4rem;">
+            <!-- <div style="font-family: 'Patrick Hand SC', cursive; color: var(--ink-secondary); margin-bottom: 24px; border-bottom: 2px dotted var(--pencil-gray); padding-bottom: 8px; font-size: 1.4rem;">
                 (* indicates equal contribution, # indicates corresponding author)
+            </div> -->
+
+            <div class="pub-item" data-pub-id="relic">
+                <div class="pub-img-wrapper" onclick="openModal(this)">
+                    <video autoplay loop muted playsinline class="sketch-img keep-color">
+                        <source src="./pic/2025/relic.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="pub-details">
+                    <div class="pub-title">RELIC: Interactive Video World Model with Long-Horizon Memory</div>
+                    <div class="pub-authors">Yicong Hong*, Yiqun Mei*, <span class="me">Chongjian Ge*</span>, Yiran Xu, Yang Zhou, Sai Bi, Yannick Hold-Geoffroy, Mike Roberts, Matthew Fisher, Eli Shechtman, Kalyan Sunkavalli, Feng Liu, Zhengqi Li, Hao Tan</div>
+                    <div class="pub-authors">* first authors in random order</div>
+                    <div class="pub-venue">Tech Report 2025</div>
+                    <div class="pub-links">
+                        <a href="https://relic-worldmodel.github.io/" class="pub-link-btn project">Project</a>
+                        <a href="https://arxiv.org/abs/2512.04040" class="pub-link-btn">Paper</a>
+                    </div>
+                </div>
             </div>
 
             <div class="pub-item" data-pub-id="awm">
@@ -385,7 +403,8 @@
                 <div class="pub-details">
                     <div class="pub-title">Advantage Weighted Matching: Aligning RL with Pretraining in Diffusion Models</div>
                     <div class="pub-authors">Shuchen Xue, <span class="me">Chongjian Ge#</span>, Shilong Zhang, Yichen Li, Zhi-Ming Ma.</div>
-                    <div class="pub-venue">arXiv Preprint 2025</div>
+                    <div class="pub-authors"># corresponding author</div>
+                    <div class="pub-venue">Tech Report 2025</div>
                     <div class="pub-links">
                         <a href="https://arxiv.org/abs/2509.25050" class="pub-link-btn">Paper</a>
                         <a href="https://github.com/scxue/advantage_weighted_matching" class="pub-link-btn">Code</a>
@@ -400,7 +419,7 @@
                 <div class="pub-details">
                     <div class="pub-title">Character Mixing for Video Generation</div>
                     <div class="pub-authors">Tingting Liao, <span class="me">Chongjian Ge</span>, Guangyi Liu, Hao Li, Yi Zhou.</div>
-                    <div class="pub-venue">arXiv Preprint 2025</div>
+                    <div class="pub-venue">Tech Report 2025</div>
                     <div class="pub-links">
                         <a href="https://tingtingliao.github.io/mimix/" class="pub-link-btn project">Project</a>
                         <a href="https://arxiv.org/abs/2510.05093" class="pub-link-btn">Paper</a>
@@ -415,7 +434,7 @@
                 <div class="pub-details">
                     <div class="pub-title">PixelFlow: Pixel-Space Generative Models with Flow</div>
                     <div class="pub-authors">Shoufa Chen, <span class="me">Chongjian Ge</span>, Shilong Zhang, Peize Sun, Ping Luo.</div>
-                    <div class="pub-venue">arXiv Preprint 2025</div>
+                    <div class="pub-venue">Tech Report 2025</div>
                     <div class="pub-links">
                         <a href="https://arxiv.org/pdf/2504.07963" class="pub-link-btn">Paper</a>
                         <a href="https://github.com/ShoufaChen/PixelFlow" class="pub-link-btn">Code</a>
@@ -432,6 +451,7 @@
                 <div class="pub-details">
                     <div class="pub-title">Goku: Flow Based Video Generative Foundation Models</div>
                     <div class="pub-authors">Shoufa Chen*, <span class="me">Chongjian Ge*</span>, Yuqi Zhang, Yida Zhang, Fengda Zhu, Hao Yang, Hongxiang Hao, Hui Wu, Zhichao Lai, Yifei Hu, Ting-Che Lin, Shilong Zhang, Fu Li, Chuan Li, Xing Wang, Yanghua Peng, Peize Sun, Ping Luo, Yi Jiang, Zehuan Yuan, Bingyue Peng, Xiaobing Liu.</div>
+                    <div class="pub-authors">* equal contribution</div>
                     <div class="pub-venue">CVPR 2025 <span class="venue-highlight">Highlight</span></div>
                     <div class="pub-links">
                         <a href="https://saiyan-world.github.io/goku/" class="pub-link-btn project">Project</a>
@@ -462,6 +482,7 @@
                 <div class="pub-details">
                     <div class="pub-title">PixArt-Σ: Weak-to-Strong Training of Diffusion Transformer for 4K Text-to-Image</div>
                     <div class="pub-authors">Junsong Chen*, <span class="me">Chongjian Ge*</span>, Enze Xie*, Yue Wu*, Lewei Yao, Xiaozhe Ren, Zhongdao Wang, Ping Luo, Huchuan Lu, Zhenguo Li.</div>
+                    <div class="pub-authors">* equal contribution</div>
                     <div class="pub-venue">ECCV 2024</div>
                     <div class="pub-links">
                         <a href="https://pixart-alpha.github.io/PixArt-sigma-project/" class="pub-link-btn project">Project</a>
@@ -478,6 +499,7 @@
                 <div class="pub-details">
                     <div class="pub-title">PIXART-α: Fast Training of Diffusion Transformer for Photorealistic Text-to-Image Synthesis</div>
                     <div class="pub-authors">Junsong Chen*, Jincheng Yu*, <span class="me">Chongjian Ge*</span>, Lewei Yao*, Enze Xie, Yue Wu, Zhongdao Wang, James Kwok, Ping Luo, Huchuan Lu, Zhenguo Li.</div>
+                    <div class="pub-authors">* equal contribution</div>
                     <div class="pub-venue">ICLR 2024 <span class="venue-highlight">Spotlight</span></div>
                     <div class="pub-links">
                         <a href="http://pixart-alpha.github.io/" class="pub-link-btn project">Project</a>
@@ -494,6 +516,7 @@
                 <div class="pub-details">
                     <div class="pub-title">MetaBEV: Solving Sensor Failures for BEV Detection and Map Segmentation</div>
                     <div class="pub-authors"><span class="me">Chongjian Ge*</span>, Junsong Chen*, Enze Xie, Zhongdao Wang, Lanqing Hong, Huchuan Lu, Zhenguo Li, Ping Luo.</div>
+                    <div class="pub-authors">* equal contribution</div>
                     <div class="pub-venue">ICCV 2023</div>
                     <div class="pub-links">
                         <a href="https://chongjiange.github.io/subpages/metabev.html" class="pub-link-btn project">Project</a>
@@ -510,7 +533,7 @@
                 <div class="pub-details">
                     <div class="pub-title">Advancing Vision Transformers with Group-Mix Attention</div>
                     <div class="pub-authors"><span class="me">Chongjian Ge</span>, Xiaohan Ding, Zhan Tong, Li Yuan, Jiangliu Wang, Yibing Song, Ping Luo.</div>
-                    <div class="pub-venue">arXiv Preprint</div>
+                    <div class="pub-venue">Tech Report</div>
                     <div class="pub-links">
                         <a href="https://chongjiange.github.io/subpages/gma" class="pub-link-btn project">Project</a>
                         <a href="https://arxiv.org/abs/2311.15157" class="pub-link-btn">Paper</a>
@@ -526,6 +549,7 @@
                 <div class="pub-details">
                     <div class="pub-title">Large Language Models as Automated Aligners for benchmarking Vision-Language Models</div>
                     <div class="pub-authors">Yuanfeng Ji*, <span class="me">Chongjian Ge*</span>, Weikai Kong, Enze Xie, Zhengying Liu, Zhengguo Li, Ping Luo.</div>
+                    <div class="pub-authors">* equal contribution</div>
                     <div class="pub-venue">ICLR 2024</div>
                     <div class="pub-links">
                         <a href="https://arxiv.org/abs/2311.14580" class="pub-link-btn">Paper</a>
@@ -548,6 +572,35 @@
                 </div>
             </div>
 
+            <div class="pub-item" data-pub-id="dcton">
+                <div class="pub-img-wrapper" onclick="openModal(this)">
+                    <img src="./pic/2021/cvpr2021_dcton.png" alt="DCTON" class="sketch-img">
+                </div>
+                <div class="pub-details">
+                    <div class="pub-title">Disentangled Cycle Consistency for Highly-realistic Virtual Try-On</div>
+                    <div class="pub-authors"><span class="me">Chongjian Ge</span>, Yibing Song, Yuying Ge, Han Yang, Wei Liu, Ping Luo.</div>
+                    <div class="pub-venue">CVPR 2021</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2103.09479" class="pub-link-btn">Paper</a>
+                        <a href="https://github.com/ChongjianGE/DCTON" class="pub-link-btn">Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-item" data-pub-id="neal">
+                <div class="pub-img-wrapper" onclick="openModal(this)">
+                    <img src="./pic/2023/tip_neal.png" alt="NEAL" class="sketch-img">
+                </div>
+                <div class="pub-details">
+                    <div class="pub-title">Rethinking Attentive Object Detection via Neural Attention Learning</div>
+                    <div class="pub-authors"><span class="me">Chongjian Ge</span>, Yibing Song, Chao Ma, Yuankai Qi, Ping Luo.</div>
+                    <div class="pub-venue">TIP 2023</div>
+                    <div class="pub-links">
+                        <a href="https://ieeexplore.ieee.org/document/10186342" class="pub-link-btn">Paper</a>
+                    </div>
+                </div>
+            </div>
+
             <div class="pub-item" data-pub-id="adaptformer">
                 <div class="pub-img-wrapper" onclick="openModal(this)">
                     <img src="./pic/2022/arxiv_adaptformer.png" alt="AdaptFormer" class="sketch-img">
@@ -555,6 +608,7 @@
                 <div class="pub-details">
                     <div class="pub-title">AdaptFormer: Adapting Vision Transformers for Scalable Visual Recognition</div>
                     <div class="pub-authors">Shoufa Chen*, <span class="me">Chongjian Ge*</span>, Zhan Tong, Jiangliu Wang, Yibing Song, Jue Wang, Ping Luo.</div>
+                    <div class="pub-authors">* equal contribution</div>
                     <div class="pub-venue">NeurIPS 2022</div>
                     <div class="pub-links">
                         <a href="http://www.shoufachen.com/adaptformer-page/" class="pub-link-btn project">Project</a>
@@ -620,35 +674,6 @@
                     <div class="pub-links">
                         <a href="https://arxiv.org/abs/2110.05340" class="pub-link-btn">Paper</a>
                         <a href="https://github.com/ChongjianGE/CARE" class="pub-link-btn">Code</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pub-item" data-pub-id="dcton">
-                <div class="pub-img-wrapper" onclick="openModal(this)">
-                    <img src="./pic/2021/cvpr2021_dcton.png" alt="DCTON" class="sketch-img">
-                </div>
-                <div class="pub-details">
-                    <div class="pub-title">Disentangled Cycle Consistency for Highly-realistic Virtual Try-On</div>
-                    <div class="pub-authors"><span class="me">Chongjian Ge</span>, Yibing Song, Yuying Ge, Han Yang, Wei Liu, Ping Luo.</div>
-                    <div class="pub-venue">CVPR 2021</div>
-                    <div class="pub-links">
-                        <a href="https://arxiv.org/abs/2103.09479" class="pub-link-btn">Paper</a>
-                        <a href="https://github.com/ChongjianGE/DCTON" class="pub-link-btn">Code</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pub-item" data-pub-id="neal">
-                <div class="pub-img-wrapper" onclick="openModal(this)">
-                    <img src="./pic/2023/tip_neal.png" alt="NEAL" class="sketch-img">
-                </div>
-                <div class="pub-details">
-                    <div class="pub-title">Rethinking Attentive Object Detection via Neural Attention Learning</div>
-                    <div class="pub-authors"><span class="me">Chongjian Ge</span>, Yibing Song, Chao Ma, Yuankai Qi, Ping Luo.</div>
-                    <div class="pub-venue">TIP 2023</div>
-                    <div class="pub-links">
-                        <a href="https://ieeexplore.ieee.org/document/10186342" class="pub-link-btn">Paper</a>
                     </div>
                 </div>
             </div>
