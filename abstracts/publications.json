@@ -1,4 +1,14 @@
 {
+  "chimera": {
+    "title": "Chimera: Designing and Chinchilla-Scaling Hybrid Visual Diffusion Transformers",
+    "image": "./pic/2026/chimera.png",
+    "abstract": "Chimera combines an efficient visual diffusion architecture with a compute-optimal scaling recipe for image and video generation. Its unified text-and-visual token stream uses Kimi Delta Attention for efficient sequence processing, Multi-head Latent Attention for global interaction, and modality-aware convolutions for local context, without positional embeddings. Sparse experts increase capacity while limiting active computation. HeteroP transfers hyperparameters across model widths and depths, making it possible to estimate how model size, training volume, and the image-video mixture should scale with compute. These estimates guide an 11B-parameter model with 2B active parameters. Relative to a matched Wan-2.1 baseline, the complete system reaches 7.3 times the pretraining compute efficiency. It also extends generation from five-second training clips to thirty-second videos without length-specific fine-tuning."
+  },
+  "flare": {
+    "title": "FLARE: Diffusion for Hybrid Language Model",
+    "image": "./pic/2026/flare.png",
+    "abstract": "FLARE converts hybrid-attention autoregressive language models into diffusion language models while retaining useful capabilities from their initial checkpoints. It combines balanced autoregressive and diffusion supervision with kernels tailored to hybrid attention and a shared inference system. A single checkpoint supports both draft-and-verify autoregressive decoding and parallel token denoising. Controlled experiments identify the quality of conversion data as a major factor in preserving model capability. With a limited post-training budget, FLARE remains competitive with leading open diffusion language models across model sizes and improves throughput during concurrent serving on one GPU. The results motivate designing conversion data, training objectives, model architecture, and inference together."
+  },
   "relic":{
     "title": "RELIC: Interactive Video World Model with Long-Horizon Memory",
     "image": "./pic/2025/relic.mp4",
