@@ -391,10 +391,53 @@
       `<li><a href="#${esc(h.id)}">${esc(h.dataset.toc || h.textContent.trim())}</a></li>`).join('')}</ol>`;
   }
 
+  // Visits today, shown by any element marked data-visits (the home page footer has one).
+  // A visit is one browser arriving after at least 30 minutes away, or for the first time that day:
+  // moving between pages and reloading add nothing. Days run on Pacific time, so every reader sees
+  // the same number. The count is kept by a free public counter, one key per day. Only the published
+  // site adds to it; a local copy just reads it. If the counter cannot be reached the line stays hidden.
+  const VISITS = {
+    api: 'https://abacus.jasoncameron.dev',
+    space: 'chongjiange-github-io',
+    host: 'chongjiange.github.io',
+    zone: 'America/Los_Angeles',
+    gap: 30 * 60 * 1000
+  };
+
+  function countVisit() {
+    const out = $('[data-visits]');
+    let day = '';
+    try {
+      const parts = new Intl.DateTimeFormat('en-US', { timeZone: VISITS.zone, year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(new Date());
+      const part = (type) => parts.find((p) => p.type === type).value;
+      day = `${part('year')}-${part('month')}-${part('day')}`;
+    } catch (e) { return; }
+
+    let arrived = false;
+    if (location.hostname === VISITS.host && !navigator.webdriver) {
+      const now = Date.now();
+      let last = null;
+      try { last = JSON.parse(localStorage.getItem('visit')); } catch (e) { /* storage blocked or unreadable */ }
+      arrived = !last || last.day !== day || now - last.at > VISITS.gap;
+      try { localStorage.setItem('visit', JSON.stringify({ day, at: now })); } catch (e) { /* storage blocked */ }
+    }
+    if (!arrived && !out) return;
+
+    fetch(`${VISITS.api}/${arrived ? 'hit' : 'get'}/${VISITS.space}/${day}`, { cache: 'no-store' })
+      .then((r) => (r.ok ? r.json() : r.status === 404 ? { value: 0 } : Promise.reject(new Error(String(r.status)))))
+      .then(({ value }) => {
+        if (!out || !Number.isFinite(value)) return;
+        out.textContent = `${value.toLocaleString('en-US')} ${value === 1 ? 'visit' : 'visits'} today`;
+        out.hidden = false;
+      })
+      .catch(() => {});
+  }
+
   function init() {
     render();
     buildToc();
     lazyVideos();
+    countVisit();
     const links = $$('.toc a[href^="#"], .ar-toc a[href^="#"]');
     if (links.length) spy(links);
     if (location.hash) {

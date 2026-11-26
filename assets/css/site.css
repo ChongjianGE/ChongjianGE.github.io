@@ -427,7 +427,8 @@ details.fold > :last-child { margin-bottom: 16px; }
 .foot-mail a { color: var(--deep-muted); transition: color 0.15s; }
 .foot-mail a:hover { color: #fff; }
 .foot-meta { color: var(--deep-muted); text-align: right; }
-.foot-credit { margin-top: 4px; font-size: 12.5px; }
+.foot-credit, .foot-visits { margin-top: 4px; font-size: 12.5px; }
+.foot-visits { font-variant-numeric: tabular-nums; }
 .foot-credit a { text-decoration: underline; text-underline-offset: 2px; transition: color 0.15s; }
 .foot-credit a:hover { color: #fff; }
 
