@@ -60,7 +60,7 @@ window.SITE = {
     {
       id: "embodied_studio",
       short: "Embodied Studio",
-      title: "Embodied Studio: Benchmarking MLLM Robot Policies with Agent-Driven Task Generation",
+      title: "Embodied Studio: Benchmarking Robot-Use Agents with Agent-Driven Task Generation",
       authors: "Shuai Yang, Tianyu Wang, Jiuxiang Gu, Shaoteng Liu, Hanwen Jiang, Haodong Li, Xiangyan Liu, Tong Wu, Chongjian Ge#",
       note: "# Corresponding author",
       venue: "In review",
