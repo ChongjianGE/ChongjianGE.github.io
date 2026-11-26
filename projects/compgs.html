@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" data-base="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CompGS | Chongjian GE</title>
+<meta name="description" content="CompGS is a generative framework that uses 3D Gaussian Splatting for efficient, compositional text-to-3D content generation.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CompGS | Chongjian GE">
+<meta property="og:description" content="CompGS is a generative framework that uses 3D Gaussian Splatting for efficient, compositional text-to-3D content generation.">
+<meta property="og:image" content="https://chongjiange.github.io/assets/img/pubs/compgs.jpg">
+<link rel="icon" href="../assets/img/projects/compgs/logo.png">
+<link rel="apple-touch-icon" href="../assets/img/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400..700;1,400&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../index.html"><img src="../assets/img/icon-64.png" alt="" width="28" height="28">Chongjian GE</a>
+    <nav class="nav" id="site-nav" aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="../news.html">News</a>
+      <a href="../publications.html" class="active">Publications</a>
+      <a href="../blog.html">Blog</a>
+      <a class="nav-cta" href="mailto:gechongjian.us@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7.5 8.5 6 8.5-6"/></svg>Contact</a>
+    </nav>
+    <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</header>
+
+<main id="main">
+<div class="ar-page">
+  <div class="ar-head">
+    <div class="ar-crumb"><a href="../publications.html">Publications</a><span aria-hidden="true">›</span><span>CompGS</span></div>
+    <div class="ar-eyebrow"><span>CVPR 2025</span></div>
+    <h1>CompGS: Unleashing 2D Compositionality for Compositional Text-to-3D via Dynamically Optimizing 3D Gaussians</h1>
+    <div class="ar-authors"><a href="../index.html">Chongjian Ge</a><sup>1,2∗</sup>, <a href="https://www.chenfengx.com/" target="_blank" rel="noopener">Chenfeng Xu</a><sup>2</sup>, <a href="https://jiyuanfeng.github.io/" target="_blank" rel="noopener">Yuanfeng Ji</a><sup>1</sup>, <a href="https://pholypeng.github.io/" target="_blank" rel="noopener">Chensheng Peng</a><sup>2</sup>, <a href="https://msc.berkeley.edu/people/tomizuka.html" target="_blank" rel="noopener">Masayoshi Tomizuka</a><sup>2</sup>, <a href="http://luoping.me/" target="_blank" rel="noopener">Ping Luo</a><sup>1</sup>, <a href="https://dingmyu.github.io/" target="_blank" rel="noopener">Mingyu Ding</a><sup>2,3+</sup>, <a href="https://varunjampani.github.io/" target="_blank" rel="noopener">Varun Jampani</a><sup>4+</sup>, <a href="https://zhanwei.site/" target="_blank" rel="noopener">Wei Zhan</a><sup>2</sup></div>
+    <div class="ar-affil"><span><sup>1</sup>The University of Hong Kong</span><span><sup>2</sup>University of California, Berkeley</span><span><sup>3</sup>UNC-Chapel Hill</span><span><sup>4</sup>Stability AI</span></div>
+    <div class="ar-affil"><span><sup>∗</sup>Work done while visiting UC Berkeley</span><span><sup>+</sup>Shared corresponding authors</span></div>
+    <div class="ar-actions">
+      <a class="pill-btn" href="https://arxiv.org/abs/2410.20723" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>arXiv</a>
+    </div>
+  </div>
+
+  <aside class="ar-toc" aria-label="Contents">
+    <h3>Contents</h3>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#abstract">Abstract</a></li>
+      <li><a href="#method">Method</a></li>
+      <li><a href="#multi">Multiple objects</a></li>
+      <li><a href="#single">Single object</a></li>
+      <li><a href="#quantitative">T3Bench results</a></li>
+      <li><a href="#editing">3D editing</a></li>
+      <li><a href="#citation">Citation</a></li>
+    </ol>
+  </aside>
+
+  <div class="ar-main prose">
+    <figure id="overview">
+      <div class="fig"><img src="../assets/img/projects/compgs/teaser.jpg" alt="Compositional 3D generation with CompGS" loading="lazy" decoding="async" data-zoom></div>
+      <figcaption>Illustration of compositional 3D generation and CompGS. CompGS achieves compositional text-to-3D by transferring 2D compositionality to initialize 3D Gaussians.</figcaption>
+    </figure>
+
+    <h2 id="abstract">Abstract</h2>
+    <p>Recent breakthroughs in text-guided image generation have significantly advanced the field of 3D generation. While generating a single high-quality 3D object is now feasible, generating multiple objects with reasonable interactions within a 3D space, a.k.a. compositional 3D generation, presents substantial challenges.</p>
+    <p>This paper introduces CompGS, a novel generative framework that employs 3D Gaussian Splatting (GS) for efficient, compositional text-to-3D content generation. To achieve this goal, two core designs are proposed: (1) <b>3D Gaussians initialization with 2D compositionality</b>: we transfer the well-established 2D compositionality to initialize the Gaussian parameters on an entity-by-entity basis, ensuring both consistent 3D priors for each entity and reasonable interactions among multiple entities; (2) <b>Dynamic optimization</b>: we propose a dynamic strategy to optimize 3D Gaussians using Score Distillation Sampling (SDS) loss. CompGS first automatically decomposes 3D Gaussians into distinct entity parts, enabling optimization at both the entity and composition levels. Additionally, CompGS optimizes across objects of varying scales by dynamically adjusting the spatial parameters of each entity, enhancing the generation of fine-grained details, particularly in smaller entities.</p>
+    <p>Qualitative comparisons and quantitative evaluations on T3Bench demonstrate the effectiveness of CompGS in generating compositional 3D objects with superior image quality and semantic alignment over existing methods. CompGS can also be easily extended to controllable 3D editing, facilitating scene generation. We hope CompGS will provide new insights to the compositional 3D generation. Codes will be released to the research community upon publication.</p>
+
+    <h2 id="method">Method</h2>
+    <figure>
+      <div class="fig"><img src="../assets/img/projects/compgs/pipeline.jpg" alt="Overall pipeline of CompGS" loading="lazy" decoding="async" data-zoom></div>
+      <figcaption><b>Overall pipeline of CompGS.</b> Given a compositional prompt <i>V</i>, we first use an LLM to decompose it into entity-level prompts <i>v<sub>l</sub></i>, guiding the segmentation of each entity from the compositional image generated by T2I models. The segmented images initialize entity-level 3D Gaussians via image-to-3D models. CompGS employs a dynamic optimization strategy, alternating between composition-level optimization of <i>θ</i> and entity-level optimization of <i>θ<sub>l</sub></i>. For entity-level optimization, CompGS dynamically maintains volume consistency to refine the details of each object, particularly the small ones.</figcaption>
+    </figure>
+
+    <h2 id="multi">Qualitative comparisons: multiple objects</h2>
+    <figure>
+      <div class="fig"><img src="../assets/img/projects/compgs/comparisons_multi.jpg" alt="Qualitative comparisons on the multiple-objects track of T3Bench" loading="lazy" decoding="async" data-zoom></div>
+      <figcaption><b>CompGS and other text-to-3D models on T3Bench (multiple objects track).</b> Compared to others, CompGS is better at generating highly-composed, high-quality 3D contents that strictly align with the given texts.</figcaption>
+    </figure>
+
+    <h2 id="single">Qualitative comparisons: single object</h2>
+    <figure>
+      <div class="fig"><img src="../assets/img/projects/compgs/comparisons_single.jpg" alt="Qualitative comparisons on the single-object track of T3Bench" loading="lazy" decoding="async" data-zoom></div>
+      <figcaption><b>CompGS and other text-to-3D models on T3Bench (single object track).</b> Compared to others, CompGS is better at generating highly-composed, high-quality 3D contents that strictly align with the given texts.</figcaption>
+    </figure>
+
+    <h2 id="quantitative">Quantitative comparisons on T3Bench</h2>
+    <figure>
+      <div class="fig"><img src="../assets/img/projects/compgs/quantitative.png" alt="Table of quantitative comparisons with baselines on T3Bench" loading="lazy" decoding="async" data-zoom></div>
+      <figcaption><b>Quantitative comparisons with baselines on T3Bench (all tracks).</b> CompGS is compared with feed-forward models, optimization-based models, and models specifically designed for compositional generation.</figcaption>
+    </figure>
+
+    <h2 id="editing">Progressive 3D editing</h2>
+    <figure>
+      <div class="fig"><img src="../assets/img/projects/compgs/editing.jpg" alt="Progressive 3D editing with CompGS" loading="lazy" decoding="async" data-zoom></div>
+      <figcaption>CompGS provides a user-friendly way to progressively edit on 3D scenes for compositional generation.</figcaption>
+    </figure>
+
+    <h2 id="citation">Citation</h2>
+    <div class="bibtex">
+      <button type="button" class="chip-link" data-copy="bibtex">Copy</button>
+      <pre id="bibtex">@inproceedings{ge2025compgs,
+  title     = {CompGS: Unleashing 2D Compositionality for Compositional Text-to-3D via Dynamically Optimizing 3D Gaussians},
+  author    = {Ge, Chongjian and Xu, Chenfeng and Ji, Yuanfeng and Peng, Chensheng and Tomizuka, Masayoshi and Luo, Ping and Ding, Mingyu and Jampani, Varun and Zhan, Wei},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year      = {2025}
+}</pre>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer class="foot">
+  <div class="foot-inner">
+    <div>
+      <div class="foot-brand">Chongjian GE</div>
+      <div class="foot-mail"><a href="mailto:gechongjian.us@gmail.com">gechongjian.us@gmail.com</a></div>
+    </div>
+    <div class="foot-meta">© 2026</div>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

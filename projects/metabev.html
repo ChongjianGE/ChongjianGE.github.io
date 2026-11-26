@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en" data-base="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MetaBEV | Chongjian GE</title>
+<meta name="description" content="MetaBEV is a robust BEV perception framework that handles sensor corruptions, missing sensors and multi-task conflicts.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MetaBEV | Chongjian GE">
+<meta property="og:description" content="MetaBEV is a robust BEV perception framework that handles sensor corruptions, missing sensors and multi-task conflicts.">
+<meta property="og:image" content="https://chongjiange.github.io/assets/img/pubs/metabev.jpg">
+<link rel="icon" href="../assets/img/projects/metabev/car.png">
+<link rel="apple-touch-icon" href="../assets/img/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400..700;1,400&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../index.html"><img src="../assets/img/icon-64.png" alt="" width="28" height="28">Chongjian GE</a>
+    <nav class="nav" id="site-nav" aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="../news.html">News</a>
+      <a href="../publications.html" class="active">Publications</a>
+      <a href="../blog.html">Blog</a>
+      <a class="nav-cta" href="mailto:gechongjian.us@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7.5 8.5 6 8.5-6"/></svg>Contact</a>
+    </nav>
+    <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</header>
+
+<main id="main">
+<div class="ar-page">
+  <div class="ar-head">
+    <div class="ar-crumb"><a href="../publications.html">Publications</a><span aria-hidden="true">›</span><span>MetaBEV</span></div>
+    <div class="ar-eyebrow"><span>ICCV 2023</span></div>
+    <h1>MetaBEV: Solving Sensor Failures for BEV Detection and Map Segmentation</h1>
+    <div class="ar-authors"><a href="../index.html">Chongjian Ge</a><sup>1∗</sup>, <a href="https://scholar.google.com/citations?user=p4zxPP8AAAAJ&hl=zh-CN" target="_blank" rel="noopener">Junsong Chen</a><sup>3,1∗</sup>, <a href="https://xieenze.github.io/" target="_blank" rel="noopener">Enze Xie</a><sup>2+</sup>, <a href="https://zhongdao.github.io/" target="_blank" rel="noopener">Zhongdao Wang</a><sup>2</sup>, <a href="https://scholar.google.com/citations?user=2p7x6OUAAAAJ&hl=zh-CN" target="_blank" rel="noopener">Lanqing Hong</a><sup>2</sup>, <a href="https://scholar.google.com/citations?user=D3nE0agAAAAJ&hl=en" target="_blank" rel="noopener">Huchuan Lu</a><sup>3</sup>, <a href="https://scholar.google.com/citations?user=XboZC1AAAAAJ&hl=en" target="_blank" rel="noopener">Zhenguo Li</a><sup>2</sup>, <a href="http://luoping.me/" target="_blank" rel="noopener">Ping Luo</a><sup>1+</sup></div>
+    <div class="ar-affil"><span><sup>1</sup>The University of Hong Kong</span><span><sup>2</sup>Huawei Noah's Ark Lab</span><span><sup>3</sup>Dalian University of Technology</span></div>
+    <div class="ar-affil"><span><sup>∗</sup>Equal contribution</span><span><sup>+</sup>Corresponding author</span></div>
+    <div class="ar-actions">
+      <a class="pill-btn" href="https://arxiv.org/abs/2304.09801" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>arXiv</a>
+      <a class="pill-btn" href="https://github.com/ChongjianGE/MetaBEV" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>Code</a>
+    </div>
+  </div>
+
+  <aside class="ar-toc" aria-label="Contents">
+    <h3>Contents</h3>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#abstract">Abstract</a></li>
+      <li><a href="#method">Method</a></li>
+      <li><a href="#experiments">Experiments</a></li>
+      <li><a href="#citation">Citation</a></li>
+    </ol>
+  </aside>
+
+  <div class="ar-main prose">
+    <figure id="overview">
+      <div class="fig"><img src="../assets/img/pubs/metabev.jpg" alt="MetaBEV 3D predictions on full modalities and under sensor missing or corruptions" loading="lazy" decoding="async" data-zoom></div>
+      <figcaption>We propose MetaBEV to efficiently solve sensor failures (including large-scale sensor corruption and extreme sensor missing) and task conflicts in BEV perception.</figcaption>
+    </figure>
+
+    <h2 id="abstract">Abstract</h2>
+    <p>Perception systems in modern autonomous driving vehicles typically take inputs from complementary multi-modal sensors, e.g., LiDAR and cameras. However, in real-world applications, sensor corruptions and failures lead to inferior performances, thus compromising autonomous safety.</p>
+    <p>In this paper, we propose a robust framework, called MetaBEV, to address extreme real-world environments, involving overall six sensor corruptions and two extreme sensor-missing situations. In MetaBEV, signals from multiple sensors are first processed by modal-specific encoders. Subsequently, a set of dense BEV queries are initialized, termed meta-BEV. These queries are then processed iteratively by a BEV-Evolving decoder, which selectively aggregates deep features from either LiDAR, cameras, or both modalities. The updated BEV representations are further leveraged for multiple 3D prediction tasks. Additionally, we introduce a new M<sup>2</sup>oE structure to alleviate the performance drop on distinct tasks in multi-task joint learning.</p>
+    <p>Finally, MetaBEV is evaluated on the nuScenes dataset with 3D object detection and BEV map segmentation tasks. Experiments show MetaBEV outperforms prior arts by a large margin on both full and corrupted modalities. For instance, when the LiDAR signal is missing, MetaBEV improves 35.5% detection NDS and 17.7% segmentation mIoU upon the vanilla BEVFusion model; and when the camera signal is absent, MetaBEV still achieves 69.2% NDS and 53.7% mIoU, which is even higher than previous works that perform on full-modalities. Moreover, MetaBEV performs fairly against previous methods in both canonical perception and multi-task learning settings, refreshing state-of-the-art nuScenes BEV map segmentation with 70.4% mIoU.</p>
+
+    <!-- VIDEOS PARKED (checked 2026-11-25): YouTube reports every MetaBEV demo video below, and the main
+         demo TiEQpYq77Xo, as "This video is unavailable". Once they are re-uploaded, update the ids,
+         move this block out of the comment and add the three sections back to the Contents list.
+
+    <h2 id="lidar">MetaBEV on LiDAR failures</h2>
+    <p>MetaBEV performs robustly on LiDAR-failure cases, including <i>Limited Field</i>, <i>Beams Reduction</i> and <i>Missing of Objects</i>.</p>
+    <div class="video-grid">
+      <div><a class="yt small" data-yt="NrLazECoDiI" href="https://www.youtube.com/watch?v=NrLazECoDiI" target="_blank" rel="noopener" aria-label="Play video: Limited Field (LF) 300 degree"></a><div class="video-cap"><b>Limited Field (LF)</b> · 300 degree</div></div>
+      <div><a class="yt small" data-yt="6xQWvO8_UpM" href="https://www.youtube.com/watch?v=6xQWvO8_UpM" target="_blank" rel="noopener" aria-label="Play video: Limited Field (LF) 180 degree"></a><div class="video-cap"><b>Limited Field (LF)</b> · 180 degree</div></div>
+      <div><a class="yt small" data-yt="wdxBKu2RwmA" href="https://www.youtube.com/watch?v=wdxBKu2RwmA" target="_blank" rel="noopener" aria-label="Play video: Limited Field (LF) 120 degree"></a><div class="video-cap"><b>Limited Field (LF)</b> · 120 degree</div></div>
+      <div><a class="yt small" data-yt="It5WqV6uEbE" href="https://www.youtube.com/watch?v=It5WqV6uEbE" target="_blank" rel="noopener" aria-label="Play video: Beams Reduction (BR) 16 beams"></a><div class="video-cap"><b>Beams Reduction (BR)</b> · 16 beams</div></div>
+      <div><a class="yt small" data-yt="gUVHhgQ8R6o" href="https://www.youtube.com/watch?v=gUVHhgQ8R6o" target="_blank" rel="noopener" aria-label="Play video: Beams Reduction (BR) 8 beams"></a><div class="video-cap"><b>Beams Reduction (BR)</b> · 8 beams</div></div>
+      <div><a class="yt small" data-yt="xf7whI2uH2Y" href="https://www.youtube.com/watch?v=xf7whI2uH2Y" target="_blank" rel="noopener" aria-label="Play video: Beams Reduction (BR) 4 beams"></a><div class="video-cap"><b>Beams Reduction (BR)</b> · 4 beams</div></div>
+      <div><a class="yt small" data-yt="ajT__ARTwYk" href="https://www.youtube.com/watch?v=ajT__ARTwYk" target="_blank" rel="noopener" aria-label="Play video: Missing of Objects (MO) 0.1 rate"></a><div class="video-cap"><b>Missing of Objects (MO)</b> · 0.1 rate</div></div>
+      <div><a class="yt small" data-yt="0wiT_XBG4q8" href="https://www.youtube.com/watch?v=0wiT_XBG4q8" target="_blank" rel="noopener" aria-label="Play video: Missing of Objects (MO) 0.5 rate"></a><div class="video-cap"><b>Missing of Objects (MO)</b> · 0.5 rate</div></div>
+      <div><a class="yt small" data-yt="IwFnOAWT-S0" href="https://www.youtube.com/watch?v=IwFnOAWT-S0" target="_blank" rel="noopener" aria-label="Play video: Missing of Objects (MO) 1.0 rate"></a><div class="video-cap"><b>Missing of Objects (MO)</b> · 1.0 rate</div></div>
+    </div>
+
+    <h2 id="camera">MetaBEV on camera failures</h2>
+    <p>MetaBEV performs robustly on camera-failure cases, including <i>View Drop</i>, <i>View Noise</i> and <i>Obstacle Occlusion</i>.</p>
+    <div class="video-grid">
+      <div><a class="yt small" data-yt="Cni2cci3g0U" href="https://www.youtube.com/watch?v=Cni2cci3g0U" target="_blank" rel="noopener" aria-label="Play video: View Drop (VD) 1 view"></a><div class="video-cap"><b>View Drop (VD)</b> · 1 view</div></div>
+      <div><a class="yt small" data-yt="2zB8I2sGa58" href="https://www.youtube.com/watch?v=2zB8I2sGa58" target="_blank" rel="noopener" aria-label="Play video: View Drop (VD) 3 views"></a><div class="video-cap"><b>View Drop (VD)</b> · 3 views</div></div>
+      <div><a class="yt small" data-yt="-9tUbFofkYE" href="https://www.youtube.com/watch?v=-9tUbFofkYE" target="_blank" rel="noopener" aria-label="Play video: View Drop (VD) 6 views"></a><div class="video-cap"><b>View Drop (VD)</b> · 6 views</div></div>
+      <div><a class="yt small" data-yt="axC9ujQNxGs" href="https://www.youtube.com/watch?v=axC9ujQNxGs" target="_blank" rel="noopener" aria-label="Play video: View Noise (VN) 1 view"></a><div class="video-cap"><b>View Noise (VN)</b> · 1 view</div></div>
+      <div><a class="yt small" data-yt="-VgvESemp5E" href="https://www.youtube.com/watch?v=-VgvESemp5E" target="_blank" rel="noopener" aria-label="Play video: View Noise (VN) 3 views"></a><div class="video-cap"><b>View Noise (VN)</b> · 3 views</div></div>
+      <div><a class="yt small" data-yt="QekwErx7Xj4" href="https://www.youtube.com/watch?v=QekwErx7Xj4" target="_blank" rel="noopener" aria-label="Play video: View Noise (VN) 6 views"></a><div class="video-cap"><b>View Noise (VN)</b> · 6 views</div></div>
+      <div><a class="yt small" data-yt="LEWuHPWSkIs" href="https://www.youtube.com/watch?v=LEWuHPWSkIs" target="_blank" rel="noopener" aria-label="Play video: Obstacle Occlusion (OO)"></a><div class="video-cap"><b>Obstacle Occlusion (OO)</b></div></div>
+    </div>
+
+    <h2 id="missing">MetaBEV on extreme sensor missing</h2>
+    <p>MetaBEV performs robustly when a whole modality is absent, including <i>Missing LiDAR</i> and <i>Missing Camera</i>.</p>
+    <div class="video-grid two">
+      <div><a class="yt small" data-yt="L20UpZXp1yY" href="https://www.youtube.com/watch?v=L20UpZXp1yY" target="_blank" rel="noopener" aria-label="Play video: Missing LiDAR"></a><div class="video-cap"><b>Missing LiDAR</b></div></div>
+      <div><a class="yt small" data-yt="erPQQwQyx6U" href="https://www.youtube.com/watch?v=erPQQwQyx6U" target="_blank" rel="noopener" aria-label="Play video: Missing Camera"></a><div class="video-cap"><b>Missing Camera</b></div></div>
+    </div>
+    -->
+
+    <h2 id="method">Method</h2>
+    <figure>
+      <div class="fig"><img src="../assets/img/projects/metabev/pipeline.jpg" alt="Overview of the MetaBEV framework" loading="lazy" decoding="async" data-zoom></div>
+      <figcaption><b>An overview of the MetaBEV framework.</b> The multi-modal inputs are separately processed by the camera encoder <i>ϕ<sub>c</sub></i>(·) and LiDAR encoder <i>ϕ<sub>l</sub></i>(·) to produce the BEV representations <i>B<sub>c</sub></i>, <i>B<sub>l</sub></i>. To generate the fused BEV features, a BEV-Evolving decoder takes multi-modal BEV representations and an external initialized meta-BEV feature (as a query feature) for correlation computation. Task-specific heads take the fused features for 3D detection.</figcaption>
+    </figure>
+
+    <h2 id="experiments">Experiments</h2>
+    <figure>
+      <div class="fig"><img src="../assets/img/projects/metabev/full_modality.png" alt="Comparisons with state-of-the-art methods on the nuScenes val set" loading="lazy" decoding="async" data-zoom></div>
+      <figcaption><b>Table 1. Comparisons with SoTA methods on nuScenes val set.</b> We use -C and -T to denote equipping MetaBEV with the CenterPoint head and Transfusion head. MTL stands for testing multi-tasks with the same model. † and ‡ stand for separating or sharing the BEV feature encoder, respectively. MetaBEV outperforms the SoTA multi-modal fusion methods by +4.7% mIoU on nuScenes (val) BEV map segmentation and achieves comparable 3D object detection performance. MetaBEV also performs best in multi-task learning.</figcaption>
+    </figure>
+    <figure>
+      <div class="fig"><img src="../assets/img/projects/metabev/sensor_missing.png" alt="Experimental comparisons on extreme sensor missing" loading="lazy" decoding="async" data-zoom></div>
+      <figcaption><b>Table 2. Experimental comparisons on extreme sensor missing.</b> MetaBEV is able to totally drop the features from the missing modalities for inference, while others cannot. We attempt to replace the missing features with zero in other works so that they can output results, which are colored as blue. MetaBEV still consistently outperforms prior works when facing extreme sensor absence.</figcaption>
+    </figure>
+    <figure>
+      <div class="fig"><img src="../assets/img/projects/metabev/sensor_corruptions.png" alt="Experimental comparisons on sensor corruptions with various degrees" loading="lazy" decoding="async" data-zoom></div>
+      <figcaption><b>Table 3. Experimental comparisons on sensor corruptions with various degrees.</b> Texts in blue denote the specific corruption degrees. MetaBEV consistently outperforms BEVFusion on various sensor corruptions in both zero-shot and in-domain tests.</figcaption>
+    </figure>
+
+    <h2 id="citation">Citation</h2>
+    <div class="bibtex">
+      <button type="button" class="chip-link" data-copy="bibtex">Copy</button>
+      <pre id="bibtex">@inproceedings{ge2023metabev,
+  title     = {MetaBEV: Solving Sensor Failures for BEV Detection and Map Segmentation},
+  author    = {Ge, Chongjian and Chen, Junsong and Xie, Enze and Wang, Zhongdao and Hong, Lanqing and Lu, Huchuan and Li, Zhenguo and Luo, Ping},
+  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+  year      = {2023}
+}</pre>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer class="foot">
+  <div class="foot-inner">
+    <div>
+      <div class="foot-brand">Chongjian GE</div>
+      <div class="foot-mail"><a href="mailto:gechongjian.us@gmail.com">gechongjian.us@gmail.com</a></div>
+    </div>
+    <div class="foot-meta">© 2026</div>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

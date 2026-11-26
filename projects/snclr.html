@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en" data-base="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SNCLR | Chongjian GE</title>
+<meta name="description" content="SNCLR uses soft neighbors to explore the correlation among samples in contrastive visual representation learning.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SNCLR | Chongjian GE">
+<meta property="og:description" content="SNCLR uses soft neighbors to explore the correlation among samples in contrastive visual representation learning.">
+<meta property="og:image" content="https://chongjiange.github.io/assets/img/pubs/snclr.png">
+<link rel="icon" href="../assets/img/icon-64.png">
+<link rel="apple-touch-icon" href="../assets/img/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400..700;1,400&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../index.html"><img src="../assets/img/icon-64.png" alt="" width="28" height="28">Chongjian GE</a>
+    <nav class="nav" id="site-nav" aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="../news.html">News</a>
+      <a href="../publications.html" class="active">Publications</a>
+      <a href="../blog.html">Blog</a>
+      <a class="nav-cta" href="mailto:gechongjian.us@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7.5 8.5 6 8.5-6"/></svg>Contact</a>
+    </nav>
+    <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</header>
+
+<main id="main">
+<div class="ar-page">
+  <div class="ar-head">
+    <div class="ar-crumb"><a href="../publications.html">Publications</a><span aria-hidden="true">›</span><span>SNCLR</span></div>
+    <div class="ar-eyebrow"><span>ICLR 2023</span></div>
+    <h1>Soft Neighbors are Positive Supporters in Contrastive Visual Representation Learning</h1>
+    <div class="ar-authors"><a href="../index.html">Chongjian Ge</a>, <a href="https://laura-wang.github.io" target="_blank" rel="noopener">Jiangliu Wang</a>, <a href="https://scholar.google.com/citations?user=6FsgWBMAAAAJ&hl=zh-CN" target="_blank" rel="noopener">Zhan Tong</a>, <a href="https://www.shoufachen.com/" target="_blank" rel="noopener">Shoufa Chen</a>, <a href="https://ybsong00.github.io" target="_blank" rel="noopener">Yibing Song</a>, <a href="http://luoping.me/" target="_blank" rel="noopener">Ping Luo</a></div>
+
+    <div class="ar-actions">
+      <a class="pill-btn" href="https://arxiv.org/abs/2303.17142" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>arXiv</a>
+      <a class="pill-btn" href="https://github.com/ChongjianGE/SNCLR" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>Code</a>
+    </div>
+  </div>
+
+  <aside class="ar-toc" aria-label="Contents">
+    <h3>Contents</h3>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#abstract">Abstract</a></li>
+      <li><a href="#method">Method</a></li>
+      <li><a href="#citation">Citation</a></li>
+    </ol>
+  </aside>
+
+  <div class="ar-main prose">
+    <figure id="overview">
+      <div class="fig"><video autoplay muted loop playsinline controls poster="../assets/img/projects/snclr-teaser.jpg" width="2160" height="828"><source src="../assets/video/snclr-teaser.mp4" type="video/mp4"></video></div>
+      <figcaption>We leverage the soft neighbors to sufficiently explore the correlation information among samples in contrastive learning.</figcaption>
+    </figure>
+
+    <h2 id="abstract">Abstract</h2>
+    <p>Contrastive learning methods train visual encoders by comparing views (e.g., often created via a group of data augmentations on the same instance) from one instance to others. Typically, the views created from one instance are set as positive, while views from other instances are negative. This binary instance discrimination is studied extensively to improve feature representations in self-supervised learning.</p>
+    <p>In this paper, we rethink the instance discrimination framework and find the binary instance labeling insufficient to measure correlations between different samples. For an intuitive example, given a random image instance, there may exist other images in a mini-batch whose content meanings are the same (i.e., belonging to the same category) or partially related (i.e., belonging to a similar category). How to treat the images that correlate similarly to the current image instance leaves an unexplored problem. We thus propose to support the current image by exploring other correlated instances (i.e., soft neighbors).</p>
+    <p>We first carefully cultivate a candidate neighbor set, which will be further utilized to explore the highly-correlated instances. A cross-attention module is then introduced to predict the correlation score (denoted as positiveness) of other correlated instances with respect to the current one. The positiveness score quantitatively measures the positive support from each correlated instance, and is encoded into the objective for pretext training. To this end, our proposed method benefits in discriminating uncorrelated instances while absorbing correlated instances for SSL. We evaluate our soft neighbor contrastive learning method (SNCLR) on standard visual recognition benchmarks, including image classification, object detection, and instance segmentation. The state-of-the-art recognition performance shows that SNCLR is effective in improving feature representations from both ViT and CNN encoders.</p>
+
+    <h2 id="method">Method</h2>
+    <figure>
+      <div class="fig"><img src="../assets/img/pubs/snclr.png" alt="Overview of the SNCLR framework" loading="lazy" decoding="async" data-zoom></div>
+      <figcaption><b>Overview of SNCLR.</b> A candidate neighbor set is built for the current instance, and an attention module predicts the positiveness of each neighbor, which is encoded into the training objective.</figcaption>
+    </figure>
+
+    <h2 id="citation">Citation</h2>
+    <div class="bibtex">
+      <button type="button" class="chip-link" data-copy="bibtex">Copy</button>
+      <pre id="bibtex">@inproceedings{ge2023soft,
+  title     = {Soft Neighbors are Positive Supporters in Contrastive Visual Representation Learning},
+  author    = {Ge, Chongjian and Wang, Jiangliu and Tong, Zhan and Chen, Shoufa and Song, Yibing and Luo, Ping},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2023}
+}</pre>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer class="foot">
+  <div class="foot-inner">
+    <div>
+      <div class="foot-brand">Chongjian GE</div>
+      <div class="foot-mail"><a href="mailto:gechongjian.us@gmail.com">gechongjian.us@gmail.com</a></div>
+    </div>
+    <div class="foot-meta">© 2026</div>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

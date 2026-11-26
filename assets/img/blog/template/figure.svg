@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-label="Placeholder chart">
+  <rect width="1200" height="560" fill="#ffffff"/>
+  <g stroke="#e8eaed" stroke-width="2">
+    <path d="M120 100H1120M120 200H1120M120 300H1120M120 400H1120"/>
+  </g>
+  <path d="M120 60V480H1120" fill="none" stroke="#5f6368" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M120 440C300 430 420 380 560 300S860 150 1120 110" fill="none" stroke="#1a73e8" stroke-width="6" stroke-linecap="round"/>
+  <path d="M120 450C320 445 480 420 640 380S920 300 1120 270" fill="none" stroke="#9aa0a6" stroke-width="6" stroke-linecap="round" stroke-dasharray="4 16"/>
+  <g fill="#1a73e8"><circle cx="560" cy="300" r="10"/><circle cx="1120" cy="110" r="10"/></g>
+  <g font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#5f6368">
+    <text x="620" y="530" text-anchor="middle">[x axis: the quantity varied, with its unit]</text>
+    <text x="44" y="270" text-anchor="middle" transform="rotate(-90 44 270)">[y axis: the metric]</text>
+    <text x="1100" y="92" text-anchor="end" fill="#1a73e8">[this post]</text>
+    <text x="1100" y="252" text-anchor="end">[baseline]</text>
+  </g>
+</svg>
